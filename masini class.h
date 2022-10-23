@@ -39,7 +39,7 @@ public:
         culoare_s = other->culoare_s;
         numar_de_inmatriculare = other->numar_de_inmatriculare;
         cilindree = other->cilindree;
-        for (int i=0; i<other->scule.size(); i++)
+        for (unsigned long long i=0; i<other->scule.size(); i++)
             scule.push_back(other->scule[i]);
         count++;
     }
@@ -52,7 +52,7 @@ public:
         culoare_s = other.culoare_s;
         numar_de_inmatriculare = other.numar_de_inmatriculare;
         cilindree = other.cilindree;
-        for (int i=0; i<other.scule.size(); i++)
+        for (unsigned long long i=0; i<other.scule.size(); i++)
             scule.push_back(other.scule[i]);
         count++;
     }
@@ -66,7 +66,7 @@ public:
     friend std::ostream& operator<< (std::ostream& os, const masini& other)
     {
         os << other.marca << "|" << other.model << "|" << other.numar_de_inmatriculare << "|" << other.culoare_p << "|" << other.culoare_s << "|" << other.cilindree << '\n';
-        for (int i=0; i<other.scule.size(); i++)
+        for (unsigned long long i=0; i<other.scule.size(); i++)
             os << other.scule[i] << "\n";
 
         for(int i=0; i<= 100; i++)
@@ -81,29 +81,29 @@ public:
         return count;
     }
 
-    void set_marca(const std::string marca)
+    void set_marca(const std::string x)
     {
-        this->marca = marca;
+        this->marca = x;
     }
-    void set_model(const std::string model)
+    void set_model(const std::string x)
     {
-        this->model = model;
+        this->model = x;
     }
-    void set_culoare_p(const culoare_t culoare_p)
+    void set_culoare_p(const culoare_t x)
     {
-        this->culoare_p = culoare_p;
+        this->culoare_p = x;
     }
-    void set_culoare_s(const culoare_t culoare_s)
+    void set_culoare_s(const culoare_t x)
     {
-        this->culoare_s = culoare_s;
+        this->culoare_s = x;
     }
-    void set_numar_de_inmatriculare(const std::string numar_de_inmatriculare)
+    void set_numar_de_inmatriculare(const std::string x)
     {
-        this->numar_de_inmatriculare = numar_de_inmatriculare;
+        this->numar_de_inmatriculare = x;
     }
-    void set_cilindree(const unsigned short cilindree)
+    void set_cilindree(const unsigned short x)
     {
-        this->cilindree = cilindree;
+        this->cilindree = x;
     }
     /**void set_scule(std::vector<scule> s)
     {
@@ -118,8 +118,10 @@ public:
         culoare_s = other.culoare_s;
         numar_de_inmatriculare = other.numar_de_inmatriculare;
         cilindree = other.cilindree;
-        for (int i=0; i<other.scule.size(); i++)
+        for (unsigned long long i=0; i<other.scule.size(); i++)
             scule.push_back(other.scule[i]);
+
+        return *this;
     }
 };
 

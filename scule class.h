@@ -67,6 +67,7 @@ public:
         culoare_p = other.culoare_p;
         culoare_s = other.culoare_s;
         stock = other.stock;
+        return *this;
     }
 
     std::string get_denumire()
@@ -94,25 +95,25 @@ public:
         return count;
     }
 
-    void set_denumire(const std::string denumire)
+    void set_denumire(const std::string x)
     {
-        this->denumire = denumire;
+        this->denumire = x;
     }
-    void set_marca(const std::string marca)
+    void set_marca(const std::string x)
     {
-        this->marca = marca;
+        this->marca = x;
     }
-    void set_culoare_p(const culoare_t culoare_p)
+    void set_culoare_p(const culoare_t x)
     {
-        this->culoare_p = culoare_p;
+        this->culoare_p = x;
     }
-    void set_culoare_s(const culoare_t culoare_s)
+    void set_culoare_s(const culoare_t x)
     {
-        this->culoare_s = culoare_s;
+        this->culoare_s = x;
     }
-    void set_stock(const int stock)
+    void set_stock(const int x)
     {
-        this->stock = stock;
+        this->stock = x;
     }
 
 };
