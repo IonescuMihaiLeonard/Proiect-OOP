@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <random>
+
 
 #include "scule class.h"
 #include "masini class.h"
