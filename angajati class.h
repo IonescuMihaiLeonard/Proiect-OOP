@@ -84,6 +84,7 @@ public:
         salariu = other.salariu;
         penalizari = other.penalizari;
         masina = other.masina;
+        return *this;
     }
 };
 
