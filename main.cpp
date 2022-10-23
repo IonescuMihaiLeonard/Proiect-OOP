@@ -14,7 +14,7 @@ int angajati::count = 0;
 
 int main()
 {
-    float memorie;
+    double memorie;
 
     std::fstream f("Bd.txt");
 
