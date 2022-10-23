@@ -22,34 +22,34 @@ public:
     angajati()
     {
         ///std::cout << "CONSTRUCTOR FARA PARAMETRII angajati" << '\n';
-        nume = "Lipsa nume";
-        prenume = "Lipsa prenume";
-        cnp = 0;
-        post = "Lipsa post";
-        salariu = 0;
-        penalizari = 0;
+        this->nume = "Lipsa nume";
+        this->prenume = "Lipsa prenume";
+        this->cnp = 0;
+        this->post = "Lipsa post";
+        this->salariu = 0;
+        this->penalizari = 0;
     }
     angajati(const angajati* other)
     {
         ///std::cout << "CONSTRUCTOR CU PARAMETRII angajati" << '\n';
-        nume = other->nume;
-        prenume = other->prenume;
-        cnp = other->cnp;
-        post = other->post;
-        salariu = other->salariu;
-        penalizari = other->penalizari;
-        masina =  other->masina;
+        this->nume = other->nume;
+        this->prenume = other->prenume;
+        this->cnp = other->cnp;
+        this->post = other->post;
+        this->salariu = other->salariu;
+        this->penalizari = other->penalizari;
+        this->masina =  other->masina;
     }
     angajati(const angajati& other)
     {
         ///std::cout << "CONSTRUCTOR DE COPIERE angajati" << '\n';
-        nume = other.nume;
-        prenume = other.prenume;
-        cnp = other.cnp;
-        post = other.post;
-        salariu = other.salariu;
-        penalizari = other.penalizari;
-        masina =  other.masina;
+        this->nume = other.nume;
+        this->prenume = other.prenume;
+        this->cnp = other.cnp;
+        this->post = other.post;
+        this->salariu = other.salariu;
+        this->penalizari = other.penalizari;
+        this->masina =  other.masina;
     }
 
     ~angajati()
@@ -77,13 +77,13 @@ public:
 
     angajati& operator= (const angajati& other)
     {
-        nume = other.nume;
-        prenume = other.prenume;
-        cnp = other.cnp;
-        post = other.post;
-        salariu = other.salariu;
-        penalizari = other.penalizari;
-        masina = other.masina;
+        this->nume = other.nume;
+        this->prenume = other.prenume;
+        this->cnp = other.cnp;
+        this->post = other.post;
+        this->salariu = other.salariu;
+        this->penalizari = other.penalizari;
+        this->masina = other.masina;
         return *this;
     }
 };
