@@ -16,7 +16,7 @@ private:
     culoare_t culoare_s;
     std::string numar_de_inmatriculare;
     unsigned short cilindree;
-    std::vector<scule> scule;
+    std::vector<class scule> scule;
 
 public:
     masini()
