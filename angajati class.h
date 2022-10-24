@@ -29,7 +29,7 @@ public:
         this->salariu = 0;
         this->penalizari = 0;
     }
-    angajati(const angajati* other);
+    angajati(const class angajati* other);
 
     angajati(const angajati& other)
     {
@@ -81,7 +81,7 @@ public:
 
 };
 
-angajati::angajati(const angajati* other)
+angajati::angajati(const class angajati* other)
 {
     ///std::cout << "CONSTRUCTOR CU PARAMETRII angajati" << '\n';
     this->nume = other->nume;

@@ -24,7 +24,7 @@ public:
         this->stock = 0;
         count++;
     }
-    scule(const scule* other);
+    scule(const class scule* other);
 
     scule(const scule& other)
     {
@@ -110,7 +110,7 @@ public:
 
 };
 
-scule::scule(const scule* other)
+scule::scule(const class scule* other)
 {
     ///std::cout << "CONSTRUCTOR CU PARAMETRII scule" << '\n';
     this->denumire = other->denumire;

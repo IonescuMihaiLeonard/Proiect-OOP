@@ -30,7 +30,7 @@ public:
         this->cilindree = 0;
         count++;
     }
-    masini(masini* other);
+    masini(const class masini* other);
 
     masini(const masini& other)
     {
@@ -114,7 +114,7 @@ public:
     }
 };
 
-masini::masini(masini* other)
+masini::masini(const class masini* other)
 {
     ///std::cout << "CONSTRUCTOR CU PARAMETRII masini" << '\n';
     this->marca = other->marca;
