@@ -24,7 +24,8 @@ public:
         this->stock = 0;
         count++;
     }
-    scule(const class scule* other);
+
+    explicit scule(const class scule* other);
 
     scule(const scule& other)
     {

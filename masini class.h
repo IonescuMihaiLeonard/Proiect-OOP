@@ -30,7 +30,7 @@ public:
         this->cilindree = 0;
         count++;
     }
-    masini(const class masini* other);
+    explicit masini(const class masini* other);
 
     masini(const masini& other)
     {

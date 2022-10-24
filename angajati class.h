@@ -29,7 +29,7 @@ public:
         this->salariu = 0;
         this->penalizari = 0;
     }
-    angajati(const class angajati* other);
+    explicit angajati(const class angajati* other);
 
     angajati(const angajati& other)
     {
