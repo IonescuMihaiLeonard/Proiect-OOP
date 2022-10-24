@@ -14,29 +14,11 @@ private:
     int stock;
 
 public:
-    scule()
-    {
-        ///std::cout << "CONSTRUCTOR FARA PARAMETRII scule" << '\n';
-        this->denumire = "Lipsa denumire";
-        this->marca = "Lipsa marca";
-        this->culoare_p = culoare_t::lipsa;
-        this->culoare_s = culoare_t::lipsa;
-        this->stock = 0;
-        count++;
-    }
+    scule();
 
     explicit scule(const class scule* other);
 
-    scule(const scule& other)
-    {
-        ///std::cout << "CONSTRUCTOR PRIN REFERINTA scule" << '\n';
-        this->denumire = other.denumire;
-        this->marca = other.marca;
-        this->culoare_p = other.culoare_p;
-        this->culoare_s = other.culoare_s;
-        this->stock = other.stock;
-        count++;
-    }
+    scule(const scule& other);
 
     ~scule()
     {
@@ -44,14 +26,7 @@ public:
         count--;
     }
 
-    friend std::ostream& operator<< (std::ostream& os, const scule& other)
-    {
-        os << other.denumire << "|" << other.marca << "|" << other.culoare_p << "|" << other.culoare_s << "|" << other.stock << '\n';
-        for(int i=0; i<= 100; i++)
-            os << "-";
-        os <<'\n';
-        return os;
-    }
+    friend std::ostream& operator<< (std::ostream& os, const scule& other);
 
     scule& operator= (const scule& other)
     {
@@ -111,6 +86,16 @@ public:
 
 };
 
+scule::scule()
+{
+    ///std::cout << "CONSTRUCTOR FARA PARAMETRII scule" << '\n';
+    this->denumire = "Lipsa denumire";
+    this->marca = "Lipsa marca";
+    this->culoare_p = culoare_t::lipsa;
+    this->culoare_s = culoare_t::lipsa;
+    this->stock = 0;
+    count++;
+}
 scule::scule(const class scule* other)
 {
     ///std::cout << "CONSTRUCTOR CU PARAMETRII scule" << '\n';
@@ -121,5 +106,17 @@ scule::scule(const class scule* other)
     this->stock = other->stock;
     count++;
 }
+scule::scule(const scule& other)
+{
+    ///std::cout << "CONSTRUCTOR PRIN REFERINTA scule" << '\n';
+    this->denumire = other.denumire;
+    this->marca = other.marca;
+    this->culoare_p = other.culoare_p;
+    this->culoare_s = other.culoare_s;
+    this->stock = other.stock;
+    count++;
+}
+
+
 
 #endif
