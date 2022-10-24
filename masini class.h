@@ -81,11 +81,11 @@ public:
         return count;
     }
 
-    void set_marca(const std::string x)
+    void set_marca(const std::string& x)
     {
         this->marca = x;
     }
-    void set_model(const std::string x)
+    void set_model(const std::string& x)
     {
         this->model = x;
     }
@@ -97,7 +97,7 @@ public:
     {
         this->culoare_s = x;
     }
-    void set_numar_de_inmatriculare(const std::string x)
+    void set_numar_de_inmatriculare(const std::string& x)
     {
         this->numar_de_inmatriculare = x;
     }

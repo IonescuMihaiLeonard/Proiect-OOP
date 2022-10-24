@@ -95,11 +95,11 @@ public:
         return count;
     }
 
-    void set_denumire(const std::string x)
+    void set_denumire(const std::string& x)
     {
         this->denumire = x;
     }
-    void set_marca(const std::string x)
+    void set_marca(const std::string& x)
     {
         this->marca = x;
     }
