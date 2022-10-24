@@ -24,16 +24,8 @@ public:
         this->stock = 0;
         count++;
     }
-    scule(const scule* other)
-    {
-        ///std::cout << "CONSTRUCTOR CU PARAMETRII scule" << '\n';
-        this->denumire = other->denumire;
-        this->marca = other->marca;
-        this->culoare_p = other->culoare_p;
-        this->culoare_s = other->culoare_s;
-        this->stock = other->stock;
-        count++;
-    }
+    scule(const scule* other);
+
     scule(const scule& other)
     {
         ///std::cout << "CONSTRUCTOR PRIN REFERINTA scule" << '\n';
@@ -117,5 +109,16 @@ public:
     }
 
 };
+
+scule::scule(const scule* other)
+{
+    ///std::cout << "CONSTRUCTOR CU PARAMETRII scule" << '\n';
+    this->denumire = other->denumire;
+    this->marca = other->marca;
+    this->culoare_p = other->culoare_p;
+    this->culoare_s = other->culoare_s;
+    this->stock = other->stock;
+    count++;
+}
 
 #endif

@@ -29,17 +29,8 @@ public:
         this->salariu = 0;
         this->penalizari = 0;
     }
-    angajati(const angajati* other)
-    {
-        ///std::cout << "CONSTRUCTOR CU PARAMETRII angajati" << '\n';
-        this->nume = other->nume;
-        this->prenume = other->prenume;
-        this->cnp = other->cnp;
-        this->post = other->post;
-        this->salariu = other->salariu;
-        this->penalizari = other->penalizari;
-        this->masina =  other->masina;
-    }
+    angajati(const angajati* other);
+
     angajati(const angajati& other)
     {
         ///std::cout << "CONSTRUCTOR DE COPIERE angajati" << '\n';
@@ -86,6 +77,20 @@ public:
         this->masina = other.masina;
         return *this;
     }
+
+
 };
+
+angajati::angajati(const angajati* other)
+{
+    ///std::cout << "CONSTRUCTOR CU PARAMETRII angajati" << '\n';
+    this->nume = other->nume;
+    this->prenume = other->prenume;
+    this->cnp = other->cnp;
+    this->post = other->post;
+    this->salariu = other->salariu;
+    this->penalizari = other->penalizari;
+    this->masina =  other->masina;
+}
 
 #endif
