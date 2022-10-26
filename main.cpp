@@ -3,10 +3,10 @@
 #include <vector>
 #include <random>
 
-#include "scule class.h"
-#include "masini class.h"
-#include "angajati class.h"
-#include "crearea obiectelor.h"
+#include "scule.h"
+#include "masini.h"
+#include "angajati.h"
+#include "crearea.h"
 
 int scule::count = 0;
 int masini::count = 0;
