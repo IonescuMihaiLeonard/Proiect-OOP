@@ -12,10 +12,13 @@ private:
     static int count;
     std::string marca;
     std::string model;
+    std::string motorizare;
+    std::string transmisie;
     culoare_t culoare_p;
     culoare_t culoare_s;
     std::string numar_de_inmatriculare;
     unsigned short cilindree;
+    unsigned short an_fabricatie;
     std::vector<class scule> scule;
 
 public:
@@ -27,14 +30,14 @@ public:
 
     ~masini();
 
-    friend std::ostream& operator<< (std::ostream& os, const masini& other)
+    friend std::ostream& operator<< (std::ostream& os, const class masini& other)
     {
-        os << other.marca << "|" << other.model << "|" << other.numar_de_inmatriculare << "|" << other.culoare_p << "|" << other.culoare_s << "|" << other.cilindree << '\n';
-        for (unsigned long long i=0; i<other.scule.size(); i++)
-            os << other.scule[i] << "\n";
+        os << "In masina " << other.marca << " " << other.model << " din anul " << other.an_fabricatie << " cu motorul " << other.motorizare << " de " << other.cilindree << "cmc" << "\n";
+        os << "si cutie "<< other.transmisie <<" cu numarul de inmatriculare " << other.numar_de_inmatriculare << " culoarea " << other.culoare_p << " cu " << other.culoare_s << " " << '\n';
+        os << "se afla urmatoarele scule:" << '\n';
 
-        for(int i=0; i<= 100; i++)
-            os << "-";
+        for (unsigned long long i=0; i<other.scule.size(); i++)
+            os << "---" << other.scule[i];
 
         os <<'\n';
         return os;
@@ -67,6 +70,14 @@ public:
     {
         this->model = x;
     }
+    void set_motorizare(const std::string& x)
+    {
+        this->motorizare = x;
+    }
+    void set_transmisie(const std::string& x)
+    {
+        this->transmisie = x;
+    }
     void set_culoare_p(const culoare_t x)
     {
         this->culoare_p = x;
@@ -83,10 +94,28 @@ public:
     {
         this->cilindree = x;
     }
-    /**void set_scule(std::vector<scule> s)
+    void set_an_fabricatie(const unsigned short x)
     {
+        this->an_fabricatie = x;
+    }
 
-    }**/
+    int adaugare_scula(class scule& s, const int nrs)
+    {
+        class scule temp = s;
+        if(nrs < s.get_stock())
+        {
+            temp.set_stock(nrs);
+            int x = s.get_stock() - nrs;
+            s.set_stock(x);
+            this->scule.push_back(temp);
+            return 1;
+        }
+        else
+        {
+            std::cout << "Nu ai suficiente " << s.get_marca() << " " << s.get_denumire() << " in depozit\n";
+            return -1;
+        }
+    }
 
 };
 

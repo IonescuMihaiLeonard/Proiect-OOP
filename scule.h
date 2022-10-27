@@ -26,10 +26,7 @@ public:
 
     friend std::ostream& operator<< (std::ostream& os, const scule& other)
     {
-        os << other.denumire << "|" << other.marca << "|" << other.culoare_p << "|" << other.culoare_s << "|" << other.stock << '\n';
-        for(int i=0; i<= 100; i++)
-            os << "-";
-        os <<'\n';
+        os << other.denumire << " " << other.marca << " de culoarea " << other.culoare_p << " cu " << other.culoare_s << " si stock de:" << other.stock << '\n';
         return os;
     }
 
@@ -90,9 +87,5 @@ public:
     }
 
 };
-
-
-
-
 
 #endif

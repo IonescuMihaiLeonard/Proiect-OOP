@@ -1,15 +1,24 @@
 # OOP Template
 
-###Depozit de scule + interveentii
+###Depozit de scule
 
 ## Tema 1
+Programul are:
+
+-o functie de a adauga automat scule in depozit
+
+-o functie pentru
+
+-o functie de a lua scule din depozit si a le adauga intr-o masina
+
+
 
 #### Cerințe
 - [x] definirea a minim 3-4 clase folosind compunere
 - [x] constructori de inițializare
 - [x] pentru o clasă: constructor de copiere, `operator=` de copiere, destructor
-<!-- - [ ] pentru o altă clasă: constructor de mutare, `operator=` de mutare, destructor -->
-<!-- - [ ] pentru o altă clasă: toate cele 5 funcții membru speciale -->
+<!-- - [x] pentru o altă clasă: constructor de mutare, `operator=` de mutare, destructor -->
+<!-- - [x] pentru o altă clasă: toate cele 5 funcții membru speciale -->
 - [x] `operator<<` pentru toate clasele
 - [x] cât mai multe `const`
 - [ ] implementarea a minim 3 funcții membru publice pentru funcționalități specifice temei alese
@@ -20,7 +29,7 @@
 ## Tema 2
 
 #### Cerințe
-- [ ] separarea codului din clase în `.h` (sau `.hpp`) și `.cpp`
+- [x] separarea codului din clase în `.h` (sau `.hpp`) și `.cpp`
 - [ ] moșteniri
   - [ ] funcții virtuale (pure) apelate prin pointeri de bază, constructori virtuali (clone)
   - [ ] apelarea constructorului din clasa de bază 

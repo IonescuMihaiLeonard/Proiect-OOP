@@ -43,6 +43,31 @@ public:
         return count;
     }
 
+    void set_nume(std::string x)
+    {
+        this->nume = x;
+    }
+    void set_prenume(std::string x)
+    {
+        this->prenume = x;
+    }
+    void set_cnp(long long x)
+    {
+        this->cnp = x;
+    }
+    void set_post(std::string x)
+    {
+        this->post = x;
+    }
+    void set_salariu(unsigned int x)
+    {
+        this->nume = x;
+    }
+    void set_penalizari(unsigned int x)
+    {
+        this->penalizari = x;
+    }
+
     angajati& operator= (const angajati& other)
     {
         this->nume = other.nume;
