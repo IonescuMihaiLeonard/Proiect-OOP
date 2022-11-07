@@ -32,7 +32,7 @@ scule::scule(const scule& other)
     this-> pret = other.pret;
     count++;
 }
-scule::scule(const std::string denumire, const std::string marca, const culoare_t culoare_p, const culoare_t culoare_s, int stock, double  pret)
+scule::scule(std::string const denumire, std::string const marca, culoare_t const culoare_p, culoare_t const culoare_s, int const stock, double const pret)
 {
     this-> denumire = denumire;
     this-> marca = marca;

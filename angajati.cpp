@@ -35,7 +35,7 @@ angajati::angajati(const angajati& other)
     this->masina =  other.masina;
     count++;
 }
-angajati::angajati(const std::string nume, const std::string prenume, const long long cnp, const std::string post, const unsigned int salariu, const unsigned int penalizari)
+angajati::angajati(std::string const nume, std::string const prenume, long long const cnp, std::string const post, unsigned int const salariu, unsigned int  const penalizari)
 {
     this-> nume = nume;
     this-> prenume = prenume;

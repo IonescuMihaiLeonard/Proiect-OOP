@@ -23,7 +23,7 @@ public:
 
     scule(const scule& other);
 
-    scule(const std::string denumire, const std::string marca, const culoare_t culoare_p, const culoare_t culoare_s, int stock, double  pret);
+    scule(std::string const denumire, std::string const marca, culoare_t const culoare_p, culoare_t const culoare_s, int const stock, double const pret);
 
     ~scule();
 
@@ -40,6 +40,7 @@ public:
         this->culoare_p = other.culoare_p;
         this->culoare_s = other.culoare_s;
         this->stock = other.stock;
+        this->pret = other.pret;
         return *this;
     }
 
