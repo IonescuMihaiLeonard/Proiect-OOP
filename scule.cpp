@@ -8,6 +8,7 @@ scule::scule()
     this->culoare_p = culoare_t::lipsa;
     this->culoare_s = culoare_t::lipsa;
     this->stock = 0;
+    this->pret =0;
     count++;
 }
 scule::scule(const class scule* other)
