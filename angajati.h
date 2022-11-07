@@ -43,27 +43,27 @@ public:
         return count;
     }
 
-    void set_nume(std::string x)
+    void set_nume(std::string const& x)
     {
         this->nume = x;
     }
-    void set_prenume(std::string x)
+    void set_prenume(std::string const& x)
     {
         this->prenume = x;
     }
-    void set_cnp(long long x)
+    void set_cnp(long long const& x)
     {
         this->cnp = x;
     }
-    void set_post(std::string x)
+    void set_post(std::string const& x)
     {
         this->post = x;
     }
-    void set_salariu(unsigned int x)
+    void set_salariu(unsigned int const& x)
     {
         this->nume = x;
     }
-    void set_penalizari(unsigned int x)
+    void set_penalizari(unsigned int const& x)
     {
         this->penalizari = x;
     }
