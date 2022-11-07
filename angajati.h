@@ -23,7 +23,7 @@ public:
     angajati();
     explicit angajati(const class angajati* other);
     angajati(const angajati& other);
-    angajati(std::string const nume, std::string const prenume, long long const cnp, std::string const post, unsigned int const salariu, unsigned int const penalizari);
+    angajati(std::string const& nume, std::string const& prenume, long long const& cnp, std::string const& post, unsigned int const& salariu, unsigned int const& penalizari);
 
     ~angajati();
 

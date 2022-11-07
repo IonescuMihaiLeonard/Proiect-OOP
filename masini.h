@@ -27,7 +27,7 @@ public:
     explicit masini(const class masini* other);
 
     masini(const masini& other);
-    masini(std::string const marca, std::string const model, std::string const motorizare, std::string const transmisie, culoare_t const culoare_p, culoare_t const culoare_s, std::string const numar_de_inmatriculare, unsigned short const cilindree, unsigned short const an_fabricatie);
+    masini(std::string const& marca, std::string const& model, std::string const& motorizare, std::string const& transmisie, culoare_t const& culoare_p, culoare_t const& culoare_s, std::string const& numar_de_inmatriculare, unsigned short const& cilindree, unsigned short const& an_fabricatie);
 
     ~masini();
 

@@ -23,7 +23,7 @@ public:
 
     scule(const scule& other);
 
-    scule(std::string const denumire, std::string const marca, culoare_t const culoare_p, culoare_t const culoare_s, int const stock, double const pret);
+    scule(std::string const& denumire, std::string const& marca, culoare_t const& culoare_p, culoare_t const& culoare_s, int const& stock, double const& pret);
 
     ~scule();
 
