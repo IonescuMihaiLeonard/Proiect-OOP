@@ -23,16 +23,16 @@ public:
     angajati();
     explicit angajati(const class angajati* other);
     angajati(const angajati& other);
+    angajati(const std::string nume, const std::string prenume, const long long cnp, const std::string post, const unsigned int salariu, const unsigned int penalizari);
 
     ~angajati();
 
     friend std::ostream& operator<< (std::ostream& os, const angajati& other)
     {
-        os << other.nume << "|" << other.prenume << "|" << other.cnp << "|" << other.post << "|" << other.salariu << "| -" << other.penalizari << '\n';
+        os << other.nume << " " << other.prenume << " cu cnp-ul:" << other.cnp << " pe postul de " << other.post << "\n";
+        os << "  cu salariul de " << other.salariu << "RON si penalizarile :" << other.penalizari << '\n';
+        os << "  Care are in grija masina :\n";
         os << other.masina;
-
-        for(int i=0; i<= 100; i++)
-            os << "-";
 
         os <<'\n';
         return os;
@@ -66,6 +66,10 @@ public:
     void set_penalizari(unsigned int x)
     {
         this->penalizari = x;
+    }
+    void set_masina(class masini x)
+    {
+        this->masina = x;
     }
 
     angajati& operator= (const angajati& other)

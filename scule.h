@@ -14,6 +14,7 @@ private:
     culoare_t culoare_p;
     culoare_t culoare_s;
     int stock;
+    double pret;
 
 public:
     scule();
@@ -22,11 +23,13 @@ public:
 
     scule(const scule& other);
 
+    scule(const std::string denumire, const std::string marca, const culoare_t culoare_p, const culoare_t culoare_s, int stock, double  pret);
+
     ~scule();
 
     friend std::ostream& operator<< (std::ostream& os, const scule& other)
     {
-        os << other.denumire << " " << other.marca << " de culoarea " << other.culoare_p << " cu " << other.culoare_s << " si stock de:" << other.stock << '\n';
+        os << other.denumire << " " << other.marca << " de culoarea " << other.culoare_p << " cu " << other.culoare_s << " si stock de " << other.stock << "bucati la pret de " << other.pret << "RON" << '\n';
         return os;
     }
 
@@ -63,6 +66,10 @@ public:
     static int get_count()
     {
         return count;
+    }
+    double get_pret()
+    {
+        return pret;
     }
 
     void set_denumire(const std::string& x)

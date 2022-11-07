@@ -9,6 +9,7 @@ angajati::angajati()
     this->post = "Lipsa post";
     this->salariu = 0;
     this->penalizari = 0;
+    count++;
 }
 angajati::angajati(const class angajati* other)
 {
@@ -20,6 +21,7 @@ angajati::angajati(const class angajati* other)
     this->salariu = other->salariu;
     this->penalizari = other->penalizari;
     this->masina =  other->masina;
+    count++;
 }
 angajati::angajati(const angajati& other)
 {
@@ -31,6 +33,17 @@ angajati::angajati(const angajati& other)
     this->salariu = other.salariu;
     this->penalizari = other.penalizari;
     this->masina =  other.masina;
+    count++;
+}
+angajati::angajati(const std::string nume, const std::string prenume, const long long cnp, const std::string post, const unsigned int salariu, const unsigned int penalizari)
+{
+    this-> nume = nume;
+    this-> prenume = prenume;
+    this-> cnp = cnp;
+    this-> post = post;
+    this-> salariu = salariu;
+    this-> penalizari = penalizari;
+    count++;
 }
 
 angajati::~angajati()

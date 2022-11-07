@@ -18,6 +18,7 @@ scule::scule(const class scule* other)
     this->culoare_p = other->culoare_p;
     this->culoare_s = other->culoare_s;
     this->stock = other->stock;
+    this-> pret = other->pret;
     count++;
 }
 scule::scule(const scule& other)
@@ -28,6 +29,17 @@ scule::scule(const scule& other)
     this->culoare_p = other.culoare_p;
     this->culoare_s = other.culoare_s;
     this->stock = other.stock;
+    this-> pret = other.pret;
+    count++;
+}
+scule::scule(const std::string denumire, const std::string marca, const culoare_t culoare_p, const culoare_t culoare_s, int stock, double  pret)
+{
+    this-> denumire = denumire;
+    this-> marca = marca;
+    this-> culoare_p = culoare_p;
+    this-> culoare_s = culoare_s;
+    this-> stock = stock;
+    this-> pret = pret;
     count++;
 }
 

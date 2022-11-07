@@ -46,7 +46,19 @@ masini::masini(const masini& other)
         this->scule.push_back(other.scule[i]);
     count++;
 }
-
+masini::masini(const std::string marca, const std::string model, const std::string motorizare, const std::string transmisie, const culoare_t culoare_p, const culoare_t culoare_s, const std::string numar_de_inmatriculare, const unsigned short cilindree, const unsigned short an_fabricatie)
+{
+    this-> marca = marca;
+    this-> model = model;
+    this-> motorizare = motorizare;
+    this-> transmisie = transmisie;
+    this-> culoare_p = culoare_p;
+    this-> culoare_s = culoare_s;
+    this-> numar_de_inmatriculare = numar_de_inmatriculare;
+    this-> cilindree = cilindree;
+    this-> an_fabricatie = an_fabricatie;
+    count++;
+}
 masini::~masini()
 {
     ///std::cout << "DESTRUCTOR masini" << '\n';

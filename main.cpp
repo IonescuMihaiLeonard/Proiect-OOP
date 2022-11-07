@@ -18,12 +18,18 @@ int angajati::count = 0;
 int main()
 {
     std::fstream f("Bd.txt");
+    double total;
 
     std::vector <scule> s;
     std::cout << "In depozit inainte de umplerea masinilor avem urmatoarele scule:\n";
     creare_scule(s);
+    total = 0.0;
     for(unsigned long long i=0; i<s.size(); i++)
+    {
         std:: cout << "--" <<s[i];
+        total += (s[i].get_stock()) * s[i].get_pret();
+    }
+    std::cout << "Cu valoare totala de " << total <<"RON\n";
     std::cout << '\n';
 
     std::vector <masini> m;
@@ -31,12 +37,29 @@ int main()
     creare_masini(m, s);
 
     for(unsigned long long i=0; i<m.size(); i++)
-        std:: cout << m[i];
+        std::cout << m[i];
 
     std::cout << "In depozit dupa umplerea masinilor mai avem:\n";
+    total = 0.0;
     for(unsigned long long i=0; i<s.size(); i++)
-        std:: cout << "--" <<s[i];
+    {
+        std::cout << "--" <<s[i];
+        total +=  s[i].get_stock() * s[i].get_pret();
+    }
+
+    std::cout << "Cu valoare totala de " << total <<"RON\n";
     std::cout << '\n';
+
+    std::vector <angajati> a;
+    creare_angajati(a, m);
+    for(unsigned long long i=0; i<a.size(); i++)
+        std::cout << "--" <<a[i];
+
+
+    std::cout << "In garaj avem urmatoarele masini dupa alocarea masinilor catre angajati:\n";
+
+    for(unsigned long long i=0; i<m.size(); i++)
+        std:: cout << m[i];
 
     memorie();
     f.close();
