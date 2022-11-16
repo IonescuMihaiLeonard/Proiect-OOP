@@ -19,6 +19,8 @@ void afisare_scule(const std::vector <scule>& s);
 void afisare_masini(const std::vector <masini>& m);
 void afisare_angajati(const std::vector <angajati>& a);
 
+double vanzare_scula(int nr, class scule s);
+
 int scule::count = 0;
 int masini::count = 0;
 int angajati::count = 0;
@@ -57,9 +59,7 @@ double calculare_total_scule(const std::vector <scule>& s)
 {
     double total = 0.0;
     for(unsigned long long i=0; i<s.size(); i++)
-    {
         total += (s[i].get_stock()) * s[i].get_pret();
-    }
     return total;
 }
 double calculare_total_masina(const class masini m)
@@ -100,6 +100,20 @@ void afisare_angajati(const std::vector <angajati>& a)
     }
 }
 
+double vanzare_scula(int nr, class scule s)
+{
+    if(s.get_stock() >= nr)
+    {
+        s.set_stock(s.get_stock()-nr);
+        return s.get_pret()*nr;
+    }
+    else
+    {
+        std::cout << "Nu ai suficiente scule";
+        return 0;
+    }
+
+}
 
 void memorie()
 {
