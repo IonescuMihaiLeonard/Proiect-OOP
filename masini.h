@@ -33,14 +33,19 @@ public:
 
     friend std::ostream& operator<< (std::ostream& os, const class masini& other)
     {
-        os << "In masina " << other.marca << " " << other.model << " din anul " << other.an_fabricatie << " cu motorul " << other.motorizare << " de " << other.cilindree << "cmc" << "\n";
-        os << "si cutie "<< other.transmisie <<" cu numarul de inmatriculare " << other.numar_de_inmatriculare << " culoarea " << other.culoare_p << " cu " << other.culoare_s << " " << '\n';
-        os << "se afla urmatoarele scule:" << '\n';
+        if(other.marca != "Lipsa marca" && other.model != "Lipsa model")
+        {
+            os << "In masina " << other.marca << " " << other.model << " din anul " << other.an_fabricatie << " cu motorul " << other.motorizare << " de " << other.cilindree << "cmc" << "\n";
+            os << "si cutie "<< other.transmisie <<" cu numarul de inmatriculare " << other.numar_de_inmatriculare << " culoarea " << other.culoare_p << " cu " << other.culoare_s << " " << '\n';
 
-        for (unsigned long long i=0; i<other.scule.size(); i++)
-            os << "---" << other.scule[i];
+            if(other.scule.size()>0)
+            {
+                os << "se afla urmatoarele scule:" << '\n';
+                for (unsigned long long i=0; i<other.scule.size(); i++)
+                    os << "---" << other.scule[i];
+            }
 
-        os <<'\n';
+        }
         return os;
     }
 
@@ -52,12 +57,27 @@ public:
         this->culoare_s = other.culoare_s;
         this->numar_de_inmatriculare = other.numar_de_inmatriculare;
         this->cilindree = other.cilindree;
+        this->an_fabricatie = other.an_fabricatie;
+        this->motorizare = other.motorizare;
+        this->transmisie = other.transmisie;
         for (unsigned long long i=0; i<other.scule.size(); i++)
             this->scule.push_back(other.scule[i]);
 
         return *this;
     }
 
+    std::vector<class scule> get_scule()const
+    {
+        return scule;
+    }
+    std::string get_marca()const
+    {
+        return this->marca;
+    }
+    std::string get_model()const
+    {
+        return this->model;
+    }
     static int get_count()
     {
         return count;

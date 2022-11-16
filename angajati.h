@@ -30,17 +30,22 @@ public:
     friend std::ostream& operator<< (std::ostream& os, const angajati& other)
     {
         os << other.nume << " " << other.prenume << " cu cnp-ul:" << other.cnp << " pe postul de " << other.post << "\n";
-        os << "  cu salariul de " << other.salariu << "RON si penalizarile :" << other.penalizari << '\n';
-        os << "  Care are in grija masina :\n";
-        os << other.masina;
-
-        os <<'\n';
+        os << "  cu salariul de " << other.salariu << "RON si penalizari de " << other.penalizari << "RON\n";
+        if(other.masina.get_marca() != "Lipsa marca" && other.masina.get_model() != "Lipsa model")
+        {
+            os << "  Care are in grija masina :\n";
+            os << other.masina;
+        }
         return os;
     }
 
     static int get_count()
     {
         return count;
+    }
+    masini get_masina()const
+    {
+        return masina;
     }
 
     void set_nume(std::string const& x)

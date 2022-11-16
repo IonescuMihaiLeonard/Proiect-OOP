@@ -5,13 +5,11 @@
 ## Tema 1
 Programul are:
 
--o functie de a adauga automat scule in depozit
-
--o functie pentru
+-functii de a adauga automat scule, masini sau angajati in depozit
 
 -o functie de a lua scule din depozit si a le adauga intr-o masina
 
-
+-o functie pentru a aloca o masina unui angajat
 
 #### Cerințe
 - [x] definirea a minim 3-4 clase folosind compunere
@@ -21,10 +19,10 @@ Programul are:
 <!-- - [x] pentru o altă clasă: toate cele 5 funcții membru speciale -->
 - [x] `operator<<` pentru toate clasele
 - [x] cât mai multe `const`
-- [ ] implementarea a minim 3 funcții membru publice pentru funcționalități specifice temei alese
-- [ ] scenariu de utilizare a claselor definite: crearea de obiecte și apelarea funcțiilor membru publice în main
-- [ ] tag de `git`: de exemplu `v0.1`
-- [ ] serviciu de integrare continuă (CI); exemplu: GitHub Actions
+- [x] implementarea a minim 3 funcții membru publice pentru funcționalități specifice temei alese
+- [x] scenariu de utilizare a claselor definite: crearea de obiecte și apelarea funcțiilor membru publice în main
+- [x] tag de `git`: de exemplu `v0.1`
+- [x] serviciu de integrare continuă (CI); exemplu: GitHub Actions
 
 ## Tema 2
 

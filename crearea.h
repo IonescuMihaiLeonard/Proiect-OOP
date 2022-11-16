@@ -63,17 +63,28 @@ void creare_masini(std::vector<masini>& m, std::vector<scule>& s)
         m_temp.adaugare_scula(s[5], 1);
         m.push_back(m_temp);
     }
+    {
+        masini m_temp("Opel", "Frontera B", "Disel", "Manuala", culoare_t::negru, culoare_t::rosu, "AG33MLI", 2171, 1998);
+        m.push_back(m_temp);
+    }
 }
 
 void creare_angajati(std::vector<angajati>& a, std::vector<masini>& m)
 {
     {
-        class angajati a_temp("Leventiu", "Adrian-George", 1234567890123, "Sofer", 5000, 54);
+        class angajati a_temp("Leventiu", "Adrian-George", 1234567890123, "Sofer", 5000, 540);
         a_temp.set_masina(m[2]);
-        a.push_back(a_temp);
         m.erase(m.end() - 1 , m.end());
+        a.push_back(a_temp);
     }
-
+    {
+        class angajati a_temp("Popescu", "Andrei-George", 1234568890123, "Secretar", 3000, 0);
+        a.push_back(a_temp);
+    }
+    {
+        class angajati a_temp("Besel", "Adrian", 1234560000123, "Sef Garaj", 6000, 0);
+        a.push_back(a_temp);
+    }
 }
 
 #endif

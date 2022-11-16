@@ -9,6 +9,7 @@ class scule
 {
 private:
     static int count;
+
     std::string denumire;
     std::string marca;
     culoare_t culoare_p;
@@ -44,23 +45,23 @@ public:
         return *this;
     }
 
-    std::string get_denumire()
+    std::string get_denumire()const
     {
         return this->denumire;
     }
-    std::string get_marca()
+    std::string get_marca()const
     {
         return this->marca;
     }
-    culoare_t get_culoare_p()
+    culoare_t get_culoare_p()const
     {
         return this->culoare_p;
     }
-    culoare_t get_culoare_s()
+    culoare_t get_culoare_s()const
     {
         return this->culoare_s;
     }
-    int get_stock()
+    int get_stock()const
     {
         return this->stock;
     }
@@ -68,7 +69,7 @@ public:
     {
         return count;
     }
-    double get_pret()
+    double get_pret()const
     {
         return pret;
     }
@@ -93,6 +94,7 @@ public:
     {
         this->stock = x;
     }
+
 
 };
 

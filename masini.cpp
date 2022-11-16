@@ -59,6 +59,7 @@ masini::masini(std::string const& marca, std::string const& model, std::string c
     this-> an_fabricatie = an_fabricatie;
     count++;
 }
+
 masini::~masini()
 {
     ///std::cout << "DESTRUCTOR masini" << '\n';
