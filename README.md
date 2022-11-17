@@ -1,6 +1,4 @@
-# OOP Template
-
-###Depozit de scule
+#Depozit de scule
 
 ## Tema 1
 Programul are:
