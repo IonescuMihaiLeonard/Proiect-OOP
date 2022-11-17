@@ -125,34 +125,34 @@ double vanzari(std::vector<scule>& s, std::vector<masini>& m, std::vector<angaja
     old_total = total;
 
     s_temp = m[0].get_scule();
-    total += vanzare_scula_final(1,s[0]);
+    total += vanzare_scula_final(1,s_temp[0]);
     if(old_total == total)
         std::cout << "in masina " << m[0].get_marca() << m[0].get_model() << "\n";
     old_total = total;
-    total += vanzare_scula_final(1,s[1]);
+    total += vanzare_scula_final(1,s_temp[1]);
     if(old_total == total)
         std::cout << "in masina " << m[0].get_marca() << m[0].get_model() << "\n";
     old_total = total;
-    total += vanzare_scula_final(1,s[2]);
+    total += vanzare_scula_final(1,s_temp[2]);
     if(old_total == total)
         std::cout << "in masina " << m[0].get_marca() << m[0].get_model() << "\n";
     old_total = total;
 
 
     s_temp = m[1].get_scule();
-    total += vanzare_scula_final(2,s[0]);
+    total += vanzare_scula_final(2,s_temp[0]);
     if(old_total == total)
         std::cout << "in masina " << m[1].get_marca() << m[1].get_model() << "\n";
     old_total = total;
-    total += vanzare_scula_final(1,s[1]);
+    total += vanzare_scula_final(1,s_temp[1]);
     if(old_total == total)
         std::cout << "in masina " << m[1].get_marca() << m[1].get_model() << "\n";
     old_total = total;
-    total += vanzare_scula_final(1,s[2]);
+    total += vanzare_scula_final(1,s_temp[2]);
     if(old_total == total)
         std::cout << "in masina " << m[1].get_marca() << m[1].get_model() << "\n";
     old_total = total;
-    total += vanzare_scula_final(3,s[3]);
+    total += vanzare_scula_final(3,s_temp[3]);
     if(old_total == total)
         std::cout << "in masina " << m[1].get_marca() << m[1].get_model() << "\n";
     old_total = total;
