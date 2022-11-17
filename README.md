@@ -11,6 +11,8 @@ Programul are:
 
 -o functie pentru a aloca o masina unui angajat
 
+-functii pentru vanzarea sculelor, inclusiv din cadrul masinilor sau angajatiilor
+
 #### Cerințe
 - [x] definirea a minim 3-4 clase folosind compunere
 - [x] constructori de inițializare

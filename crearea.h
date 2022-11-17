@@ -31,7 +31,7 @@ void creare_scule(std::vector<scule>& s)
         s.push_back(s_temp);
     }
     {
-        scule s_temp("Drujba", "Hilti", culoare_t::rosu, culoare_t::negru, 3, 298.10);
+        scule s_temp("Drujba", "Hilti", culoare_t::rosu, culoare_t::negru, 13, 298.10);
         s.push_back(s_temp);
     }
 }
