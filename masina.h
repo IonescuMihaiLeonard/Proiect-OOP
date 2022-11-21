@@ -1,12 +1,12 @@
-#ifndef MAIN_CPP_MASINI_H
-#define MAIN_CPP_MASINI_H
+#ifndef MAIN_CPP_MASINA_H
+#define MAIN_CPP_MASINA_H
 
 #include <iostream>
 #include <vector>
 #include "enum.h"
-#include "scule.h"
+#include "scula.h"
 
-class masini
+class masina
 {
 private:
     static int count;
@@ -19,19 +19,19 @@ private:
     std::string numar_de_inmatriculare;
     unsigned short cilindree;
     unsigned short an_fabricatie;
-    std::vector<class scule> scule;
+    std::vector<class scula> scule;
 
 public:
-    masini();
+    masina();
 
-    explicit masini(const class masini* other);
+    explicit masina(const class masina* other);
 
-    masini(const masini& other);
-    masini(std::string const& marca, std::string const& model, std::string const& motorizare, std::string const& transmisie, culoare_t const& culoare_p, culoare_t const& culoare_s, std::string const& numar_de_inmatriculare, unsigned short const& cilindree, unsigned short const& an_fabricatie);
+    masina(const masina& other);
+    masina(std::string const& marca, std::string const& model, std::string const& motorizare, std::string const& transmisie, culoare_t const& culoare_p, culoare_t const& culoare_s, std::string const& numar_de_inmatriculare, unsigned short const& cilindree, unsigned short const& an_fabricatie);
 
-    ~masini();
+    ~masina();
 
-    friend std::ostream& operator<< (std::ostream& os, const class masini& other)
+    friend std::ostream& operator<< (std::ostream& os, const class masina& other)
     {
         if(other.marca != "Lipsa marca" && other.model != "Lipsa model")
         {
@@ -49,7 +49,7 @@ public:
         return os;
     }
 
-    masini& operator= (const masini& other)
+    masina& operator= (const masina& other)
     {
         this->marca = other.marca;
         this->model = other.model;
@@ -66,7 +66,7 @@ public:
         return *this;
     }
 
-    std::vector<class scule> get_scule()const
+    std::vector<class scula> get_scule()const
     {
         return scule;
     }
@@ -120,9 +120,9 @@ public:
         this->an_fabricatie = x;
     }
 
-    int adaugare_scula(class scule& s, const int nrs)
+    int adaugare_scula(class scula& s, const int nrs)
     {
-        class scule temp = s;
+        class scula temp = s;
         if(nrs < s.get_stock())
         {
             temp.set_stock(nrs);

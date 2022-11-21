@@ -1,27 +1,27 @@
 #include <iostream>
 #include <vector>
-#include "scule.h"
-#include "angajati.h"
-#include "masini.h"
+#include "scula.h"
+#include "angajat.h"
+#include "masina.h"
 
 
-double calculare_total_scule(const std::vector <scule>& s)
+double calculare_total_scule(const std::vector <scula>& s)
 {
     double total = 0.0;
     for(unsigned long long i=0; i<s.size(); i++)
         total += (s[i].get_stock()) * s[i].get_pret();
     return total;
 }
-double calculare_total_masina(const class masini m)
+double calculare_total_masina(const class masina m)
 {
     return calculare_total_scule(m.get_scule());
 }
-double calculare_total_angajat(const class angajati a)
+double calculare_total_angajat(const class angajat a)
 {
     return calculare_total_masina(a.get_masina());
 }
 
-void afisare_scule(const std::vector <scule>& s)
+void afisare_scule(const std::vector <scula>& s)
 {
     for(unsigned long long i=0; i<s.size(); i++)
         std:: cout << "--" <<s[i];
@@ -29,7 +29,7 @@ void afisare_scule(const std::vector <scule>& s)
     std::cout << "Cu valoare totala de " << calculare_total_scule(s) <<"RON\n";
     std::cout << '\n';
 }
-void afisare_masini(const std::vector <masini>& m)
+void afisare_masini(const std::vector <masina>& m)
 {
     for(unsigned long long i=0; i<m.size(); i++)
     {
@@ -39,7 +39,7 @@ void afisare_masini(const std::vector <masini>& m)
         std::cout <<"\n\n";
     }
 }
-void afisare_angajati(const std::vector <angajati>& a)
+void afisare_angajati(const std::vector <angajat>& a)
 {
     for(unsigned long long i=0; i<a.size(); i++)
     {
@@ -50,7 +50,7 @@ void afisare_angajati(const std::vector <angajati>& a)
     }
 }
 
-double vanzare_scula_final(int nr, class scule& s)
+double vanzare_scula_final(int nr, class scula& s)
 {
     if(s.get_stock() >= nr)
     {
@@ -68,7 +68,7 @@ double vanzare_scula_final(int nr, class scule& s)
 void memorie()
 {
     double memorie;
-    memorie = 1.0 * ((scule::get_count() * sizeof(scule)) + (masini::get_count() * sizeof(masini)) + (angajati::get_count() * sizeof(angajati))) / 1024;
+    memorie = 1.0 * ((scula::get_count() * sizeof(scula)) + (masina::get_count() * sizeof(masina)) + (angajat::get_count() * sizeof(angajat))) / 1024;
 
     std::cout << "Programul are nevoie de ";
     if(memorie < 1024)
@@ -85,18 +85,18 @@ void memorie()
         }
     }
     std::cout << " pentru obiectele din clasele:\n";
-    std::cout << "--scule  " << scule::get_count() << "\n";
-    std::cout << "--masini  " << masini::get_count() << "\n";
-    std::cout << "--angajati  " << angajati::get_count() << "\n";
+    std::cout << "--scule  " << scula::get_count() << "\n";
+    std::cout << "--masina  " << masina::get_count() << "\n";
+    std::cout << "--angajat  " << angajat::get_count() << "\n";
 
 
 }
 
-double vanzari(std::vector<scule>& s, std::vector<masini>& m, std::vector<angajati>& a)
+double vanzari(std::vector<scula>& s, std::vector<masina>& m, std::vector<angajat>& a)
 {
     double old_total = 0.0, total = 0.0;
-    std::vector<scule> s_temp;
-    class masini m_temp;
+    std::vector<scula> s_temp;
+    class masina m_temp;
 
 
     total += vanzare_scula_final(2,s[0]);

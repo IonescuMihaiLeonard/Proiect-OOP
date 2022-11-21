@@ -1,6 +1,6 @@
-#include "scule.h"
+#include "scula.h"
 
-scule::scule()
+scula::scula()
 {
     ///std::cout << "CONSTRUCTOR FARA PARAMETRII scule" << '\n';
     this->denumire = "Lipsa denumire";
@@ -11,7 +11,7 @@ scule::scule()
     this->pret =0;
     count++;
 }
-scule::scule(const class scule* other)
+scula::scula(const class scula* other)
 {
     ///std::cout << "CONSTRUCTOR CU PARAMETRII scule" << '\n';
     this->denumire = other->denumire;
@@ -22,7 +22,7 @@ scule::scule(const class scule* other)
     this-> pret = other->pret;
     count++;
 }
-scule::scule(const scule& other)
+scula::scula(const scula& other)
 {
     ///std::cout << "CONSTRUCTOR PRIN REFERINTA scule" << '\n';
     this->denumire = other.denumire;
@@ -33,7 +33,7 @@ scule::scule(const scule& other)
     this-> pret = other.pret;
     count++;
 }
-scule::scule(std::string const& denumire, std::string const& marca, culoare_t const& culoare_p, culoare_t const& culoare_s, int const& stock, double const& pret)
+scula::scula(std::string const& denumire, std::string const& marca, culoare_t const& culoare_p, culoare_t const& culoare_s, int const& stock, double const& pret)
 {
     this-> denumire = denumire;
     this-> marca = marca;
@@ -44,7 +44,7 @@ scule::scule(std::string const& denumire, std::string const& marca, culoare_t co
     count++;
 }
 
-scule::~scule()
+scula::~scula()
 {
     ///std::cout << "DESTRUCTOR scule" << '\n';
     count--;

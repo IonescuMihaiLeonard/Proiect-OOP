@@ -1,8 +1,8 @@
-#include "angajati.h"
+#include "angajat.h"
 
-angajati::angajati()
+angajat::angajat()
 {
-    ///std::cout << "CONSTRUCTOR FARA PARAMETRII angajati" << '\n';
+    ///std::cout << "CONSTRUCTOR FARA PARAMETRII angajat" << '\n';
     this->nume = "Lipsa nume";
     this->prenume = "Lipsa prenume";
     this->cnp = 0;
@@ -11,9 +11,9 @@ angajati::angajati()
     this->penalizari = 0;
     count++;
 }
-angajati::angajati(const class angajati* other)
+angajat::angajat(const class angajat* other)
 {
-    ///std::cout << "CONSTRUCTOR CU PARAMETRII angajati" << '\n';
+    ///std::cout << "CONSTRUCTOR CU PARAMETRII angajat" << '\n';
     this->nume = other->nume;
     this->prenume = other->prenume;
     this->cnp = other->cnp;
@@ -23,9 +23,9 @@ angajati::angajati(const class angajati* other)
     this->masina =  other->masina;
     count++;
 }
-angajati::angajati(const angajati& other)
+angajat::angajat(const angajat& other)
 {
-    ///std::cout << "CONSTRUCTOR DE COPIERE angajati" << '\n';
+    ///std::cout << "CONSTRUCTOR DE COPIERE angajat" << '\n';
     this->nume = other.nume;
     this->prenume = other.prenume;
     this->cnp = other.cnp;
@@ -35,7 +35,7 @@ angajati::angajati(const angajati& other)
     this->masina =  other.masina;
     count++;
 }
-angajati::angajati(std::string const& nume, std::string const& prenume, long long const& cnp, std::string const& post, unsigned int const& salariu, unsigned int const& penalizari)
+angajat::angajat(std::string const& nume, std::string const& prenume, long long const& cnp, std::string const& post, unsigned int const& salariu, unsigned int const& penalizari)
 {
     this-> nume = nume;
     this-> prenume = prenume;
@@ -46,8 +46,8 @@ angajati::angajati(std::string const& nume, std::string const& prenume, long lon
     count++;
 }
 
-angajati::~angajati()
+angajat::~angajat()
 {
-    ///std::cout << "DESTRUCTOR angajati" << '\n';
+    ///std::cout << "DESTRUCTOR angajat" << '\n';
     count--;
 }

@@ -1,11 +1,11 @@
-#ifndef MAIN_CPP_SCULE_H
-#define MAIN_CPP_SCULE_H
+#ifndef MAIN_CPP_SCULA_H
+#define MAIN_CPP_SCULA_H
 
 #include <iostream>
 #include "enum.h"
 
 
-class scule
+class scula
 {
 private:
     static int count;
@@ -18,23 +18,23 @@ private:
     double pret;
 
 public:
-    scule();
+    scula();
 
-    explicit scule(const class scule* other);
+    explicit scula(const class scula* other);
 
-    scule(const scule& other);
+    scula(const scula& other);
 
-    scule(std::string const& denumire, std::string const& marca, culoare_t const& culoare_p, culoare_t const& culoare_s, int const& stock, double const& pret);
+    scula(std::string const& denumire, std::string const& marca, culoare_t const& culoare_p, culoare_t const& culoare_s, int const& stock, double const& pret);
 
-    ~scule();
+    ~scula();
 
-    friend std::ostream& operator<< (std::ostream& os, const scule& other)
+    friend std::ostream& operator<< (std::ostream& os, const scula& other)
     {
         os << other.denumire << " " << other.marca << " de culoarea " << other.culoare_p << " cu " << other.culoare_s << " si stock de " << other.stock << "bucati la pret de " << other.pret << "RON" << '\n';
         return os;
     }
 
-    scule& operator= (const scule& other)
+    scula& operator= (const scula& other)
     {
         this->denumire = other.denumire;
         this->marca = other.marca;

@@ -1,8 +1,8 @@
-#include "masini.h"
+#include "masina.h"
 
-masini::masini()
+masina::masina()
 {
-    ///std::cout << "CONSTRUCTOR FARA PARAMETRII masini" << '\n';
+    ///std::cout << "CONSTRUCTOR FARA PARAMETRII masina" << '\n';
     this->marca = "Lipsa marca";
     this->model = "Lipsa model";
     this->motorizare = "Lipsa Motorizare";
@@ -14,9 +14,9 @@ masini::masini()
     this->an_fabricatie = 0;
     count++;
 }
-masini::masini(const class masini* other)
+masina::masina(const class masina* other)
 {
-    ///std::cout << "CONSTRUCTOR CU PARAMETRII masini" << '\n';
+    ///std::cout << "CONSTRUCTOR CU PARAMETRII masina" << '\n';
     this->marca = other->marca;
     this->model = other->model;
     this->motorizare = other->motorizare;
@@ -30,9 +30,9 @@ masini::masini(const class masini* other)
         this->scule.push_back(other->scule[i]);
     count++;
 }
-masini::masini(const masini& other)
+masina::masina(const masina& other)
 {
-    ///std::cout << "CONSTRUCTOR DE COPIERE masini" << '\n';
+    ///std::cout << "CONSTRUCTOR DE COPIERE masina" << '\n';
     this->marca = other.marca;
     this->model = other.model;
     this->motorizare = other.motorizare;
@@ -46,7 +46,7 @@ masini::masini(const masini& other)
         this->scule.push_back(other.scule[i]);
     count++;
 }
-masini::masini(std::string const& marca, std::string const& model, std::string const& motorizare, std::string const& transmisie, culoare_t const& culoare_p, culoare_t const& culoare_s, std::string const& numar_de_inmatriculare, unsigned short const& cilindree, unsigned short const& an_fabricatie)
+masina::masina(std::string const& marca, std::string const& model, std::string const& motorizare, std::string const& transmisie, culoare_t const& culoare_p, culoare_t const& culoare_s, std::string const& numar_de_inmatriculare, unsigned short const& cilindree, unsigned short const& an_fabricatie)
 {
     this-> marca = marca;
     this-> model = model;
@@ -60,8 +60,8 @@ masini::masini(std::string const& marca, std::string const& model, std::string c
     count++;
 }
 
-masini::~masini()
+masina::~masina()
 {
-    ///std::cout << "DESTRUCTOR masini" << '\n';
+    ///std::cout << "DESTRUCTOR masina" << '\n';
     count--;
 }

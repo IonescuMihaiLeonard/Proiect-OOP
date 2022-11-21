@@ -1,13 +1,13 @@
-#ifndef MAIN_CPP_ANGAJATI_H
-#define MAIN_CPP_ANGAJATI_H
+#ifndef MAIN_CPP_ANGAJAT_H
+#define MAIN_CPP_ANGAJAT_H
 
 
 #include <iostream>
 #include <vector>
-#include "scule.h"
-#include "masini.h"
+#include "scula.h"
+#include "masina.h"
 
-class angajati
+class angajat
 {
 private:
     static int count;
@@ -17,17 +17,17 @@ private:
     std::string post;
     unsigned int salariu;
     unsigned int penalizari;
-    masini masina;
+    masina masina;
 
 public:
-    angajati();
-    explicit angajati(const class angajati* other);
-    angajati(const angajati& other);
-    angajati(std::string const& nume, std::string const& prenume, long long const& cnp, std::string const& post, unsigned int const& salariu, unsigned int const& penalizari);
+    angajat();
+    explicit angajat(const class angajat* other);
+    angajat(const angajat& other);
+    angajat(std::string const& nume, std::string const& prenume, long long const& cnp, std::string const& post, unsigned int const& salariu, unsigned int const& penalizari);
 
-    ~angajati();
+    ~angajat();
 
-    friend std::ostream& operator<< (std::ostream& os, const angajati& other)
+    friend std::ostream& operator<< (std::ostream& os, const angajat& other)
     {
         os << other.nume << " " << other.prenume << " cu cnp-ul:" << other.cnp << " pe postul de " << other.post << "\n";
         os << "  cu salariul de " << other.salariu << "RON si penalizari de " << other.penalizari << "RON\n";
@@ -43,7 +43,7 @@ public:
     {
         return count;
     }
-    masini get_masina()const
+    masina get_masina()const
     {
         return masina;
     }
@@ -72,12 +72,12 @@ public:
     {
         this->penalizari = x;
     }
-    void set_masina(class masini x)
+    void set_masina(class masina x)
     {
         this->masina = x;
     }
 
-    angajati& operator= (const angajati& other)
+    angajat& operator= (const angajat& other)
     {
         this->nume = other.nume;
         this->prenume = other.prenume;
