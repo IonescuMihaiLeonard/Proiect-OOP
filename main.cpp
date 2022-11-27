@@ -5,22 +5,23 @@
 #include <random>
 
 #include "scula.h"
+#include "bormasina.h"
 #include "masina.h"
 #include "angajat.h"
 #include "crearea.h"
 
 void memorie();
 
-double calculare_total_scule(const std::vector <scule>& s);
+double calculare_total_scule(const std::vector <scula>& s);
 double calculare_total_masina(const class masina m);
 double calculare_total_angajat(const class angajat a);
 
-void afisare_scule(const std::vector <scule>& s);
+void afisare_scule(const std::vector <scula>& s);
 void afisare_masini(const std::vector <masina>& m);
 void afisare_angajati(const std::vector <angajat>& a);
 
-double vanzari(std::vector<scule>& s, std::vector<masina>& m, std::vector<angajat>& a);
-double vanzare_scula_final(int nr, class scule& s);
+double vanzari(std::vector<scula>& s, std::vector<masina>& m, std::vector<angajat>& a);
+double vanzare_scula_final(int nr, class scula& s);
 
 int scula::count = 0;
 int masina::count = 0;
@@ -57,7 +58,10 @@ int main()
     afisare_scule(s);
 
     double total = vanzari(s, m, a);
-    std::cout << "In ziua de azi am strans un total de " << total << "RON\n";
+    std::cout << "In ziua de azi am strans un total de " << total << "RON\n\n";
+
+    bormasina b("Bormasina", "Makita", culoare_t::albastru, culoare_t::negru, 7, 52.30, 1500, 1450, "Li-ion");
+    std::cout << b << '\n';
 
     memorie();
     f.close();

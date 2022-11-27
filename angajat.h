@@ -43,7 +43,7 @@ public:
     {
         return count;
     }
-    masina get_masina()const
+    class masina get_masina()const
     {
         return masina;
     }
