@@ -7,8 +7,8 @@ bormasina::bormasina()
     this->acumulator = "Lipsa";
 }
 bormasina::bormasina(std::string const& denumire, std::string const& marca, culoare_t const& culoare_p,
-                     culoare_t const& culoare_s, int const& stock, double const& pret, double const capacitate,
-                     int const turatie, std::string const acumulator) :
+                     culoare_t const& culoare_s, int const& stock, double const& pret, double const& capacitate,
+                     int const& turatie, std::string const& acumulator) :
                      scula(denumire, marca, culoare_p, culoare_s, stock, pret),
                      capacitate(capacitate),
                      turatie(turatie),
@@ -18,5 +18,5 @@ bormasina::bormasina(std::string const& denumire, std::string const& marca, culo
 
 bormasina::~bormasina()
 {
-    ///std::cout << "Am sters bormasina";
+    ///std::cout << "destr bormasina";
 }

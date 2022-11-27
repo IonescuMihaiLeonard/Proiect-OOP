@@ -17,7 +17,7 @@ private:
     std::string post;
     unsigned int salariu;
     unsigned int penalizari;
-    masina masina;
+    class masina masina;
 
 public:
     angajat();

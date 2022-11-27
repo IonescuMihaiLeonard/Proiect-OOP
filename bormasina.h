@@ -11,7 +11,7 @@ class bormasina  : public scula
 
 public:
     bormasina();
-    bormasina(std::string const& denumire, std::string const& marca, culoare_t const& culoare_p, culoare_t const& culoare_s, int const& stock, double const& pret, double const capacitate, int const turatie, std::string const acumulator);
+    bormasina(std::string const& denumire, std::string const& marca, culoare_t const& culoare_p, culoare_t const& culoare_s, int const& stock, double const& pret, double const& capacitate, int const& turatie, std::string const& acumulator);
 
     ~bormasina();
 

@@ -30,7 +30,7 @@ public:
 
     friend std::ostream& operator<< (std::ostream& os, const scula& other)
     {
-        os << other.denumire << " " << other.marca << " de culoarea " << other.culoare_p << " cu " << other.culoare_s << " si stock de " << other.stock << "bucati la pret de " << other.pret << "RON" << '\n';
+        os << other.denumire << " " << other.marca << " de culoarea " << other.culoare_p << " cu " << other.culoare_s << " si stock de " << other.stock << " bucati la pret de " << other.pret << "RON" << '\n';
         return os;
     }
 
