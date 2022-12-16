@@ -63,8 +63,8 @@ int main()
     std::cout << "In depozit dupa vanzarea sculelor mai avem:\n";
     afisare_scule(s);
 
-    ///double total = vanzari(s, m, a);
-    ///std::cout << "In ziua de azi am strans un total de " << total << "RON\n\n";
+    double total = vanzari(s, m, a);
+    std::cout << "In ziua de azi am strans un total de " << total << "RON\n\n";
 
 
 
