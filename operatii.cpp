@@ -122,18 +122,19 @@ double vanzari(const std::vector<std::shared_ptr<scula>>& s, std::vector<masina>
     if(old_total == total)
         std::cout << "in Depzit\n";
     old_total = total;
-    total += vanzare_scula_final(23,(*s[3]));
+    total += vanzare_scula_final(2,(*s[3]));
     if(old_total == total)
         std::cout << "in Depzit\n";
     old_total = total;
-    total += vanzare_scula_final(4,(*s[4]));
-    if(old_total == total)
-        std::cout << "in Depzit\n";
-    old_total = total;
-    total += vanzare_scula_final(2,(*s[5]));
-    if(old_total == total)
-        std::cout << "in Depzit\n";
-    old_total = total;
+//    total += vanzare_scula_final(4,(*s[4]));
+//    if(old_total == total)
+//        std::cout << "in Depzit\n";
+//    old_total = total;
+//    total += vanzare_scula_final(2,(*s[5]));
+//    if(old_total == total)
+//        std::cout << "in Depzit\n";
+//    old_total = total;
+
 
     s_temp = m[0].get_scule();
     total += vanzare_scula_final(1,(*s_temp[0]));
@@ -174,26 +175,26 @@ double vanzari(const std::vector<std::shared_ptr<scula>>& s, std::vector<masina>
     total += vanzare_scula_final(1,(*s_temp[0]));
     if(old_total == total)
         std::cout << "in masina " << m_temp.get_marca() << m_temp.get_model() << "\n";
-    old_total = total;
-    total += vanzare_scula_final(1, (*s_temp[1]));
-    if(old_total == total)
-        std::cout << "in masina " << m_temp.get_marca() << m_temp.get_model() << "\n";
-    old_total = total;
-    total += vanzare_scula_final(1,(*s_temp[2]));
-    if(old_total == total)
-        std::cout << "in masina " << m_temp.get_marca() << m_temp.get_model() << "\n";
-    old_total = total;
-    total += vanzare_scula_final(1,(*s_temp[3]));
-    if(old_total == total)
-        std::cout << "in masina " << m_temp.get_marca() << m_temp.get_model() << "\n";
-    old_total = total;
-    total += vanzare_scula_final(1, (*s_temp[4]));
-    if(old_total == total)
-        std::cout << "in masina " << m_temp.get_marca() << m_temp.get_model() << "\n";
-    old_total = total;
-    total += vanzare_scula_final(1, (*s_temp[5]));
-    if(old_total == total)
-        std::cout << "in masina " << m_temp.get_marca() << m_temp.get_model() << "\n";
+//    old_total = total;
+//    total += vanzare_scula_final(1, (*s_temp[1]));
+//    if(old_total == total)
+//        std::cout << "in masina " << m_temp.get_marca() << m_temp.get_model() << "\n";
+//    old_total = total;
+//    total += vanzare_scula_final(1,(*s_temp[2]));
+//    if(old_total == total)
+//        std::cout << "in masina " << m_temp.get_marca() << m_temp.get_model() << "\n";
+//    old_total = total;
+//    total += vanzare_scula_final(1,(*s_temp[3]));
+//    if(old_total == total)
+//        std::cout << "in masina " << m_temp.get_marca() << m_temp.get_model() << "\n";
+//    old_total = total;
+//    total += vanzare_scula_final(1, (*s_temp[4]));
+//    if(old_total == total)
+//        std::cout << "in masina " << m_temp.get_marca() << m_temp.get_model() << "\n";
+//    old_total = total;
+//    total += vanzare_scula_final(1, (*s_temp[5]));
+//    if(old_total == total)
+//        std::cout << "in masina " << m_temp.get_marca() << m_temp.get_model() << "\n";
 
     std::cout << "\n";
 
