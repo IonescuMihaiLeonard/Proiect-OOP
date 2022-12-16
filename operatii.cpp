@@ -12,7 +12,7 @@
 #include "masina.h"
 
 
-double calculare_total_scule(const std::vector<std::shared_ptr<scula>> s)
+double calculare_total_scule(const std::vector<std::shared_ptr<scula>>& s)
 {
     double total = 0.0;
     for(unsigned long long i=0; i<s.size(); i++)
@@ -103,7 +103,7 @@ void memorie()
 
 }
 
-double vanzari(std::vector<std::shared_ptr<scula>>& s, std::vector<masina>& m, std::vector<angajat>& a)
+double vanzari(const std::vector<std::shared_ptr<scula>>& s, std::vector<masina>& m, std::vector<angajat>& a)
 {
     double old_total = 0.0, total = 0.0;
     std::vector<std::shared_ptr<scula>> s_temp;

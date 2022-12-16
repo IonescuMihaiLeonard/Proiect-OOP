@@ -23,7 +23,7 @@ void afisare_scule(const std::vector<std::shared_ptr<scula>>& s);
 void afisare_masini(const std::vector <masina>& m);
 void afisare_angajati(const std::vector <angajat>& a);
 
-double vanzari(std::vector<std::shared_ptr<scula>>& s, std::vector<masina>& m, std::vector<angajat>& a);
+double vanzari(const std::vector<std::shared_ptr<scula>>& s, std::vector<masina>& m, std::vector<angajat>& a);
 double vanzare_scula_final(int nr, class scula& s);
 
 int scula::count = 0;
