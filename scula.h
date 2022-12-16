@@ -27,7 +27,7 @@ public:
 
     scula(std::string const& denumire, std::string const& marca, culoare_t const& culoare_p, culoare_t const& culoare_s, int const& stock, double const& pret);
 
-    ~scula();
+    virtual ~scula();
 
     virtual std::shared_ptr<scula> clone() const = 0;
 
