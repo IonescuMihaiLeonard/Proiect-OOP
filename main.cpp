@@ -6,31 +6,37 @@
 
 #include "scula.h"
 #include "bormasina.h"
+#include "polizor.h"
+#include "drujba.h"
+
 #include "masina.h"
 #include "angajat.h"
 #include "crearea.h"
 
 void memorie();
 
-double calculare_total_scule(const std::vector <scula>& s);
+double calculare_total_scule(const std::vector<std::shared_ptr<scula>>& s);
 double calculare_total_masina(const class masina m);
 double calculare_total_angajat(const class angajat a);
 
-void afisare_scule(const std::vector <scula>& s);
+void afisare_scule(const std::vector<std::shared_ptr<scula>>& s);
 void afisare_masini(const std::vector <masina>& m);
 void afisare_angajati(const std::vector <angajat>& a);
 
-double vanzari(std::vector<scula>& s, std::vector<masina>& m, std::vector<angajat>& a);
+double vanzari(std::vector<std::shared_ptr<scula>>& s, std::vector<masina>& m, std::vector<angajat>& a);
 double vanzare_scula_final(int nr, class scula& s);
 
 int scula::count = 0;
 int masina::count = 0;
 int angajat::count = 0;
+int bormasina::count = 0;
+int polizor::count = 0;
+int drujba::count = 0;
 
 int main()
 {
     std::fstream f("Bd.txt");
-    std::vector <scula> s;
+    std::vector<std::shared_ptr<scula>> s;
     creare_scule(s);
 
     std::cout << "In depozit inainte de umplerea masinilor avem urmatoarele scule:\n";
@@ -52,16 +58,15 @@ int main()
     std::cout << "In garaj avem urmatoarele masina dupa alocarea masinilor catre angajat:\n";
     afisare_masini(m);
 
-    vanzare_scula_final(2, s[1]);
+    vanzare_scula_final(2, (*s[1]));
 
     std::cout << "In depozit dupa vanzarea sculelor mai avem:\n";
     afisare_scule(s);
 
-    double total = vanzari(s, m, a);
-    std::cout << "In ziua de azi am strans un total de " << total << "RON\n\n";
+    ///double total = vanzari(s, m, a);
+    ///std::cout << "In ziua de azi am strans un total de " << total << "RON\n\n";
 
-    bormasina b("Bormasina", "Makita", culoare_t::albastru, culoare_t::negru, 7, 52.30, 1500, 1450, "Li-ion");
-    std::cout << b << '\n';
+
 
     memorie();
     f.close();

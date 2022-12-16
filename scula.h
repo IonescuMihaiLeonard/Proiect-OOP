@@ -2,6 +2,7 @@
 #define MAIN_CPP_SCULA_H
 
 #include <iostream>
+#include <memory>
 #include "enum.h"
 
 
@@ -28,9 +29,13 @@ public:
 
     ~scula();
 
+    virtual std::shared_ptr<scula> clone() const = 0;
+
     friend std::ostream& operator<< (std::ostream& os, const scula& other)
     {
-        os << other.denumire << " " << other.marca << " de culoarea " << other.culoare_p << " cu " << other.culoare_s << " si stock de " << other.stock << " bucati la pret de " << other.pret << "RON" << '\n';
+        os << other.denumire << " " << other.marca << " de culoarea " << other.culoare_p << " cu " << other.culoare_s << '\n'
+           << " si stock de " << other.stock << " bucati la pret de " << other.pret << "RON";
+        other.afisare(os);
         return os;
     }
 
@@ -95,7 +100,11 @@ public:
         this->stock = x;
     }
 
-
+protected:
+    virtual void afisare(std::ostream& os)const
+    {
+        os << "sc normala";
+    }
 };
 
 #endif

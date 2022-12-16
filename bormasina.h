@@ -5,6 +5,8 @@
 
 class bormasina  : public scula
 {
+    static int count;
+
     double capacitate;
     int turatie;
     std::string acumulator;
@@ -15,10 +17,27 @@ public:
 
     ~bormasina();
 
+    static int get_count()
+    {
+        return count;
+    }
+
+
+    std::shared_ptr<scula> clone() const override
+    {
+        return std::make_shared<bormasina>(*this);
+    }
+
     friend std::ostream& operator<< (std::ostream& os, const bormasina& other)
     {
         os << static_cast<const scula &>(other) << "cu o turatie de " << other.turatie << "rpm, baterie de " << other.capacitate << "mAh din " << other.acumulator;
         return os;
+    }
+
+protected:
+    void afisare(std::ostream& os)const override
+    {
+        os << " cu o turatie de " << turatie << "rpm, baterie de " << capacitate << "mAh din " << acumulator;
     }
 
 };

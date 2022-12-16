@@ -28,10 +28,10 @@ Programul are:
 
 #### Cerințe
 - [x] separarea codului din clase în `.h` (sau `.hpp`) și `.cpp`
-- [ ] moșteniri
+- [x] moșteniri
   - [ ] funcții virtuale (pure) apelate prin pointeri de bază, constructori virtuali (clone)
-  - [ ] apelarea constructorului din clasa de bază 
-  - [ ] smart pointers
+  - [x] apelarea constructorului din clasa de bază 
+  - [x] smart pointers
   - [ ] `dynamic_cast`
 - [ ] suprascris cc/op= pentru copieri/atribuiri corecte, copy and swap
 - [ ] excepții

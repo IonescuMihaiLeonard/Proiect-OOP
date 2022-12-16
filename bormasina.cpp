@@ -5,6 +5,7 @@ bormasina::bormasina()
     this->capacitate = 0;
     this->turatie = 0;
     this->acumulator = "Lipsa";
+    count++;
 }
 bormasina::bormasina(std::string const& denumire, std::string const& marca, culoare_t const& culoare_p,
                      culoare_t const& culoare_s, int const& stock, double const& pret, double const& capacitate,
@@ -12,11 +13,15 @@ bormasina::bormasina(std::string const& denumire, std::string const& marca, culo
                      scula(denumire, marca, culoare_p, culoare_s, stock, pret),
                      capacitate(capacitate),
                      turatie(turatie),
-                     acumulator(acumulator){}
+                     acumulator(acumulator)
+                     {
+                         count++;
+                     }
 
 
 
 bormasina::~bormasina()
 {
+    count--;
     ///std::cout << "destr bormasina";
 }

@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <memory>
+
 #include "enum.h"
 #include "scula.h"
 
@@ -19,7 +21,7 @@ private:
     std::string numar_de_inmatriculare;
     unsigned short cilindree;
     unsigned short an_fabricatie;
-    std::vector<class scula> scule;
+    std::vector<std::shared_ptr<scula>> scule;
 
 public:
     masina();
@@ -42,7 +44,7 @@ public:
             {
                 os << "se afla urmatoarele scule:" << '\n';
                 for (unsigned long long i=0; i<other.scule.size(); i++)
-                    os << "---" << other.scule[i];
+                    os << "---" << *(other.scule[i]) << '\n';
             }
 
         }
@@ -66,7 +68,7 @@ public:
         return *this;
     }
 
-    std::vector<class scula> get_scule()const
+    std::vector<std::shared_ptr<scula>> get_scule()const
     {
         return scule;
     }
@@ -122,13 +124,14 @@ public:
 
     int adaugare_scula(class scula& s, const int nrs)
     {
-        class scula temp = s;
         if(nrs < s.get_stock())
         {
-            temp.set_stock(nrs);
+
             int x = s.get_stock() - nrs;
             s.set_stock(x);
-            this->scule.push_back(temp);
+
+            this->scule.push_back(s.clone());
+            scule[scule.size()-1]->set_stock(nrs);
             return 1;
         }
         else

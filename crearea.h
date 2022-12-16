@@ -3,64 +3,54 @@
 
 #include <algorithm>
 #include <vector>
+#include <memory>
+
 #include "scula.h"
+#include "bormasina.h"
+#include "polizor.h"
+#include "drujba.h"
+
 #include "masina.h"
 #include "angajat.h"
 
 
-void creare_scule(std::vector<scula>& s)
+void creare_scule(std::vector<std::shared_ptr<scula>>& s)
 {
-    {
-        scula s_temp("Bormasina", "Makita", culoare_t::albastru, culoare_t::negru, 7, 52.30);
-        s.push_back(s_temp);
-    }
-    {
-        scula s_temp("Polizor", "Makita", culoare_t::albastru, culoare_t::negru, 9,95.80);
-        s.push_back(s_temp);
-    }
-    {
-        scula s_temp("Drujba", "Makita", culoare_t::albastru, culoare_t::negru, 16, 256.20);
-        s.push_back(s_temp);
-    }
-    {
-        scula s_temp("Bormasina", "Hilti", culoare_t::rosu, culoare_t::negru, 14, 134.40);
-        s.push_back(s_temp);
-    }
-    {
-        scula s_temp("Rotopercutoare", "Hilti", culoare_t::rosu, culoare_t::negru , 17, 197.60);
-        s.push_back(s_temp);
-    }
-    {
-        scula s_temp("Drujba", "Hilti", culoare_t::rosu, culoare_t::negru, 13, 298.10);
-        s.push_back(s_temp);
-    }
+
+    s.push_back(std::make_shared<bormasina>("Bormasina", "Makita", culoare_t::albastru, culoare_t::negru, 7, 52.30, 1500, 1450, "Li-ion"));
+    s.push_back(std::make_shared<polizor>("Polizor", "Bosch", culoare_t::albastru, culoare_t::negru, 7, 95.40, 75, 145));
+    s.push_back(std::make_shared<drujba>("Drujba", "Hilti", culoare_t::rosu, culoare_t::negru, 17, 252.60, 3.6, 40.1, 70.31));
+    s.push_back(std::make_shared<bormasina>("Bormasina", "Hilti", culoare_t::rosu, culoare_t::negru, 7, 152.30, 1900, 1650, "Li-ion"));
+    s.push_back(std::make_shared<drujba>("Drujba", "Makita", culoare_t::albastru, culoare_t::negru, 7, 352.60, 4.2, 42.1, 72.31));
+
 }
 
-void creare_masini(std::vector<masina>& m, std::vector<scula>& s)
+void creare_masini(std::vector<masina>& m, std::vector<std::shared_ptr<scula>> s)
 {
+
     {
         masina m_temp("Mitsubishi", "L200", "Disel", "Manuala", culoare_t::negru, culoare_t::rosu, "AG66MLI", 2477, 2009);
-        m_temp.adaugare_scula(s[1] , 2);
-        m_temp.adaugare_scula(s[3] , 4);
-        m_temp.adaugare_scula(s[5] , 1);
+        m_temp.adaugare_scula((*s[1]) , 1);
+        m_temp.adaugare_scula((*s[2]) , 1);
+        m_temp.adaugare_scula((*s[3]) , 1);
         m.push_back(m_temp);
+
+
     }
     {
         masina m_temp("Toyota", "4runner", "Disel", "Automata", culoare_t::negru, culoare_t::rosu, "AG22MLI", 3956, 2015);
-        m_temp.adaugare_scula(s[0] , 2);
-        m_temp.adaugare_scula(s[2] , 1);
-        m_temp.adaugare_scula(s[3] , 1);
-        m_temp.adaugare_scula(s[4] , 3);
+        m_temp.adaugare_scula((*s[0]) , 1);
+        m_temp.adaugare_scula((*s[1]) , 1);
+        m_temp.adaugare_scula((*s[2]) , 1);
+        m_temp.adaugare_scula((*s[3]) , 1);
         m.push_back(m_temp);
     }
     {
         masina m_temp("Hyundai", "Terracan", "Benzina", "Manuala", culoare_t::negru, culoare_t::rosu, "AG11MLI", 3497, 2002);
-        m_temp.adaugare_scula(s[0], 1);
-        m_temp.adaugare_scula(s[1], 1);
-        m_temp.adaugare_scula(s[2], 1);
-        m_temp.adaugare_scula(s[3], 1);
-        m_temp.adaugare_scula(s[4], 1);
-        m_temp.adaugare_scula(s[5], 1);
+        m_temp.adaugare_scula((*s[0]), 1);
+        m_temp.adaugare_scula((*s[1]), 1);
+        m_temp.adaugare_scula((*s[2]), 1);
+        m_temp.adaugare_scula((*s[3]), 1);
         m.push_back(m_temp);
     }
     {
