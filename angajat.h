@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include "scula.h"
+#include "drujba.h"
 #include "masina.h"
 
 class angajat
@@ -75,6 +76,36 @@ public:
     void set_masina(class masina x)
     {
         this->masina = x;
+    }
+
+    void verificare()
+    {
+        if(masina.get_scule().size() > 0)
+            for(auto &sc : masina.get_scule())
+            {
+                sc->utilizeaza();
+                std::cout << "\n";
+            }
+        else
+        {
+            std::cout << "Angajatul " << prenume << " " << nume << " nu are masina!!!!\n";
+        }
+    }
+    void taie_copac()
+    {
+        for(auto &sc : masina.get_scule())
+            try
+            {
+                auto& drujba = dynamic_cast<class drujba&>(*sc);
+
+                drujba.utilizeaza();
+                std::cout << "CADEEE\n";
+
+            }
+            catch(std::bad_cast& err)
+            {
+                std::cout << err.what() << ":scula asta nu e drujba" << "\n";
+            }
     }
 
     angajat& operator= (const angajat& other)

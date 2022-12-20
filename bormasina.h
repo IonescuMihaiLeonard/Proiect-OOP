@@ -46,7 +46,7 @@ public:
     {
         std::cout << "Sa fim sinceri toata lumea foloseste bormasina in zilele noaste\n"
                   << "Disclaimer: Daca ai peste 70 de ani si bormasina te invarte pe tine, ar fi ok sa nu o mai folosesti,\n"
-                  << "chiar daca vecinii tai iti strica somnul de pranz cu manele\n";
+                  << "            chiar daca vecinii tai iti strica somnul de pranz cu manele\n";
     }
 
 protected:

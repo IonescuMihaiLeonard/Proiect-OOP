@@ -70,9 +70,10 @@ int main()
     std::cout << "In ziua de azi am strans un total de " << total << "RON\n\n";
 
 
-    s[0]->utilizeaza();
-    s[2]->utilizeaza();
 
+    a[0].verificare();
+    a[1].verificare();
+    a[0].taie_copac();
 
     memorie();
 
