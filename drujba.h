@@ -23,6 +23,15 @@ public:
         return count;
     }
 
+    drujba& operator= (const drujba& other)
+    {
+        scula::operator=(other);
+        this->putere = other.putere;
+        this->lg_sina = other.lg_sina;
+        this->cilindree =  other.cilindree;
+        return *this;
+    }
+
     std::shared_ptr<scula> clone() const override
     {
         return std::make_shared<drujba>(*this);
@@ -33,6 +42,12 @@ public:
         os << static_cast<const scula &>(other) << "cu o putere de " << other.putere << "Kw, lungimea sinei de " << other.lg_sina << "cm si cilindree de " << other.cilindree << "cmc";
         return os;
     }
+
+    void utilizeaza() const override
+    {
+        std::cout << "Pentru asta, as vrea sa vad o autorizatie\n";
+    }
+
 protected:
     void afisare(std::ostream& os)const override
     {

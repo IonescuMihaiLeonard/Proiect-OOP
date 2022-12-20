@@ -1,8 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <algorithm>
-#include <random>
 
 #include "scula.h"
 #include "bormasina.h"
@@ -12,6 +10,8 @@
 #include "masina.h"
 #include "angajat.h"
 #include "crearea.h"
+
+#include "exceptii.h"
 
 void memorie();
 
@@ -35,41 +35,47 @@ int drujba::count = 0;
 
 int main()
 {
-    std::fstream f("Bd.txt");
+    /// Prima afisare a depozitului
     std::vector<std::shared_ptr<scula>> s;
     creare_scule(s);
-
     std::cout << "In depozit inainte de umplerea masinilor avem urmatoarele scule:\n";
     afisare_scule(s);
 
+    /// Prima afisare a masinilor
     std::vector <masina> m;
     creare_masini(m, s);
     std::cout << "In garaj avem urmatoarele masina:\n";
     afisare_masini(m);
 
+    /// A2-a afisare a depozitului
     std::cout << "In depozit dupa umplerea masinilor mai avem:\n";
     afisare_scule(s);
 
+    /// Prima afisare a angajatilor
     std::vector <angajat> a;
     creare_angajati(a, m);
     std::cout << "La firma noastra avem angajatii:\n";
     afisare_angajati(a);
 
+    /// A2-a afisare a masinilor
     std::cout << "In garaj avem urmatoarele masina dupa alocarea masinilor catre angajat:\n";
     afisare_masini(m);
 
-    vanzare_scula_final(2, (*s[1]));
-
+    /// A2-a afisare a sculelor
     std::cout << "In depozit dupa vanzarea sculelor mai avem:\n";
     afisare_scule(s);
 
+    /// Afisare cifra de afaceri
     double total = vanzari(s, m, a);
     std::cout << "In ziua de azi am strans un total de " << total << "RON\n\n";
 
 
+    s[0]->utilizeaza();
+    s[2]->utilizeaza();
+
 
     memorie();
-    f.close();
+
     return 0;
 }
 

@@ -16,7 +16,6 @@
 
 void creare_scule(std::vector<std::shared_ptr<scula>>& s)
 {
-
     s.push_back(std::make_shared<bormasina>("Bormasina", "Makita", culoare_t::albastru, culoare_t::negru, 217, 52.30, 1500, 1450, "Li-ion"));
     s.push_back(std::make_shared<polizor>("Polizor", "Bosch", culoare_t::albastru, culoare_t::negru, 127, 95.40, 75, 145));
     s.push_back(std::make_shared<drujba>("Drujba", "Hilti", culoare_t::rosu, culoare_t::negru, 157, 252.60, 3.6, 40.1, 70.31));

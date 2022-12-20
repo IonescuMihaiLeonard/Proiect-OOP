@@ -50,6 +50,16 @@ public:
         return *this;
     }
 
+    static void creeare_scula()
+    {
+        count--;
+    }
+
+    static void destructor_scula()
+    {
+        count++;
+    }
+
     std::string get_denumire()const
     {
         return this->denumire;
@@ -98,6 +108,12 @@ public:
     void set_stock(const int x)
     {
         this->stock = x;
+    }
+
+    virtual void utilizeaza() const
+    {
+        std::cout << "Foloseste " << denumire << " " << marca << " cum trebe, ai grija ca e complicat!!\n"
+                  << "Disclaimer : o folosesti pe propria raspundere!\n";
     }
 
 protected:

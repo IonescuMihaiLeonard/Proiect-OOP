@@ -126,14 +126,11 @@ double vanzari(const std::vector<std::shared_ptr<scula>>& s, std::vector<masina>
     if(old_total == total)
         std::cout << "in Depzit\n";
     old_total = total;
-//    total += vanzare_scula_final(4,(*s[4]));
-//    if(old_total == total)
-//        std::cout << "in Depzit\n";
-//    old_total = total;
-//    total += vanzare_scula_final(2,(*s[5]));
-//    if(old_total == total)
-//        std::cout << "in Depzit\n";
-//    old_total = total;
+    total += vanzare_scula_final(4,(*s[4]));
+    if(old_total == total)
+        std::cout << "in Depzit\n";
+    old_total = total;
+
 
 
     s_temp = m[0].get_scule();

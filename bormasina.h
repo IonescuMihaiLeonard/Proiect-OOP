@@ -22,6 +22,14 @@ public:
         return count;
     }
 
+    bormasina& operator= (const bormasina& other)
+    {
+        scula::operator=(other);
+        this->capacitate = other.capacitate;
+        this->turatie = other.turatie;
+        this->acumulator =  other.acumulator;
+        return *this;
+    }
 
     std::shared_ptr<scula> clone() const override
     {
@@ -32,6 +40,13 @@ public:
     {
         os << static_cast<const scula &>(other) << "cu o turatie de " << other.turatie << "rpm, baterie de " << other.capacitate << "mAh din " << other.acumulator;
         return os;
+    }
+
+    void utilizeaza() const override
+    {
+        std::cout << "Sa fim sinceri toata lumea foloseste bormasina in zilele noaste\n"
+                  << "Disclaimer: Daca ai peste 70 de ani si bormasina te invarte pe tine, ar fi ok sa nu o mai folosesti,\n"
+                  << "chiar daca vecinii tai iti strica somnul de pranz cu manele\n";
     }
 
 protected:

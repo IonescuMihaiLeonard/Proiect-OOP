@@ -1,3 +1,4 @@
+#include "scula.h"
 #include "bormasina.h"
 
 bormasina::bormasina()
@@ -6,6 +7,7 @@ bormasina::bormasina()
     this->turatie = 0;
     this->acumulator = "Lipsa";
     count++;
+    creeare_scula();
 }
 bormasina::bormasina(std::string const& denumire, std::string const& marca, culoare_t const& culoare_p,
                      culoare_t const& culoare_s, int const& stock, double const& pret, double const& capacitate,
@@ -16,6 +18,7 @@ bormasina::bormasina(std::string const& denumire, std::string const& marca, culo
                      acumulator(acumulator)
                      {
                          count++;
+                         creeare_scula();
                      }
 
 
@@ -23,5 +26,6 @@ bormasina::bormasina(std::string const& denumire, std::string const& marca, culo
 bormasina::~bormasina()
 {
     count--;
+    destructor_scula();
     ///std::cout << "destr bormasina";
 }

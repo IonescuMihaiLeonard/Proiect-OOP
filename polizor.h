@@ -21,6 +21,13 @@ public:
         return count;
     }
 
+    polizor& operator= (const polizor& other)
+    {
+        scula::operator=(other);
+        this->putere = other.putere;
+        this->turatie = other.turatie;
+        return *this;
+    }
 
     std::shared_ptr<scula> clone() const override
     {
