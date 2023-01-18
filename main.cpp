@@ -69,7 +69,7 @@ int main()
     double total = vanzari(s, m, a);
     std::cout << "In ziua de azi am strans un total de " << total << "RON\n\n";
 
-/*/
+
     try
     {
         a[0].verificare();
@@ -84,7 +84,7 @@ int main()
     {
         std::cout << err.what()  << "\n";
     }
-*/
+
     a[0].taie_copac();
 
     memorie();
