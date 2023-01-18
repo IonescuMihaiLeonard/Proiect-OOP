@@ -84,11 +84,11 @@ int main()
     {
         std::cout << err.what()  << "\n";
     }
-
+*/
     a[0].taie_copac();
 
     memorie();
-*/
+
     return 0;
 }
 
