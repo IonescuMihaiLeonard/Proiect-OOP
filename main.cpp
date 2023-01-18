@@ -72,7 +72,7 @@ int main()
     try
     {
         a[1].verificare();
-        //a[0].verificare();
+        a[0].verificare();
 
 
     }
