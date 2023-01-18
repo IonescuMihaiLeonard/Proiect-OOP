@@ -16,12 +16,20 @@ public:
     explicit eroare_vanzare(const std::string &mesaj) : eroare_aplicatie("eroare la vanzarea sculelor: " + mesaj) {}
 };
 
-class eroare_echipare : public eroare_aplicatie
+class eroare_echipament : public eroare_aplicatie
 {
     using eroare_aplicatie::eroare_aplicatie;
 
 public:
-    explicit eroare_echipare(const std::string &mesaj) : eroare_aplicatie("eroare la echiparea masinii: " + mesaj) {}
+    explicit eroare_echipament(const std::string &mesaj) : eroare_aplicatie("Eroare la folosirea sculei::" + mesaj) {}
+};
+
+class eroare_masini : public eroare_aplicatie
+{
+    using eroare_aplicatie::eroare_aplicatie;
+
+public:
+    explicit eroare_masini(const std::string &mesaj) : eroare_aplicatie("Eroare Masina::" + mesaj) {}
 };
 
 

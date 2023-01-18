@@ -70,9 +70,21 @@ int main()
     std::cout << "In ziua de azi am strans un total de " << total << "RON\n\n";
 
 
+    try
+    {
+        a[0].verificare();
+        a[1].verificare();
 
-    a[0].verificare();
-    a[1].verificare();
+    }
+    catch (eroare_masini &err)
+    {
+        std::cout << err.what()  << "\n";
+    }
+    catch (eroare_echipament & err)
+    {
+        std::cout << err.what()  << "\n";
+    }
+
     a[0].taie_copac();
 
     memorie();

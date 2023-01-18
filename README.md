@@ -34,9 +34,9 @@ Programul are:
   - [x] smart pointers
   - [x] `dynamic_cast`
 - [x] suprascris cc/op= pentru copieri/atribuiri corecte, copy and swap
-- [ ] excepții
+- [x] excepții
   - [x] ierarhie proprie cu baza `std::exception` sau derivată din `std::exception`
-  - [ ] utilizare cu sens: de exemplu, `throw` în constructor, `try`/`catch` în `main`
+  - [x] utilizare cu sens: de exemplu, `throw` în constructor, `try`/`catch` în `main`
 - [x] funcții și atribute `static`
 - [x] STL
 - [x] cât mai multe `const`

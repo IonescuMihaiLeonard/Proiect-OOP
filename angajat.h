@@ -7,6 +7,7 @@
 #include "scula.h"
 #include "drujba.h"
 #include "masina.h"
+#include "exceptii.h"
 
 class angajat
 {
@@ -88,7 +89,7 @@ public:
             }
         else
         {
-            std::cout << "Angajatul " << prenume << " " << nume << " nu are masina!!!!\n";
+            throw eroare_masini("Angajatul nu are masina");
         }
     }
     void taie_copac()
@@ -104,7 +105,7 @@ public:
             }
             catch(std::bad_cast& err)
             {
-                std::cout << err.what() << ":scula asta nu e drujba" << "\n";
+                std::cout << err.what() << "::scula asta nu e drujba" << "\n";
             }
     }
 
