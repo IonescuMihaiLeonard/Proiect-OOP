@@ -80,10 +80,7 @@ int main()
     {
         std::cout << err.what()  << "\n";
     }
-    catch (eroare_echipament & err)
-    {
-        std::cout << err.what()  << "\n";
-    }
+
 
     a[0].taie_copac();
 
