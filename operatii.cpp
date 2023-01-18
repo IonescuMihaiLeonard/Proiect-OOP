@@ -6,7 +6,7 @@
 #include "bormasina.h"
 #include "polizor.h"
 #include "drujba.h"
-
+#include "lopata.h"
 
 #include "angajat.h"
 #include "masina.h"
@@ -76,7 +76,7 @@ void memorie()
 {
     double memorie;
     memorie = 1.0 * ((scula::get_count() * sizeof(scula)) + (masina::get_count() * sizeof(masina)) + (angajat::get_count() * sizeof(angajat))
-            + (bormasina::get_count() * sizeof(bormasina)) + (polizor::get_count() * sizeof(polizor)) + (drujba::get_count() * sizeof(drujba))) / 1024;
+            + (bormasina::get_count() * sizeof(bormasina)) + (polizor::get_count() * sizeof(polizor)) + (drujba::get_count() * sizeof(drujba)) + (lopata::get_count() * sizeof(lopata))) / 1024;
 
     std::cout << "Programul are nevoie de ";
     if(memorie < 1024)
@@ -97,6 +97,7 @@ void memorie()
     std::cout << "----bormasini " << bormasina::get_count() << "\n";
     std::cout << "----polizoare " << polizor::get_count() << "\n";
     std::cout << "----drujbe " << drujba::get_count() << "\n";
+    std::cout << "----lopeti " << lopata::get_count() << "\n";
     std::cout << "--masina  " << masina::get_count() << "\n";
     std::cout << "--angajat  " << angajat::get_count() << "\n";
 

@@ -9,6 +9,7 @@
 #include "bormasina.h"
 #include "polizor.h"
 #include "drujba.h"
+#include "lopata.h"
 
 #include "masina.h"
 #include "angajat.h"
@@ -21,6 +22,7 @@ void creare_scule(std::vector<std::shared_ptr<scula>>& s)
     s.push_back(std::make_shared<drujba>("Drujba", "Hilti", culoare_t::rosu, culoare_t::negru, 157, 252.60, 3.6, 40.1, 70.31));
     s.push_back(std::make_shared<bormasina>("Bormasina", "Hilti", culoare_t::rosu, culoare_t::negru, 73, 152.30, 1900, 1650, "Li-ion"));
     s.push_back(std::make_shared<drujba>("Drujba", "Makita", culoare_t::albastru, culoare_t::negru, 327, 352.60, 4.2, 42.1, 72.31));
+    s.push_back(std::make_shared<lopata>("Lopata", "Makita", culoare_t::albastru, culoare_t::negru, 327, 352.60, 53.2, 65));
 
 }
 

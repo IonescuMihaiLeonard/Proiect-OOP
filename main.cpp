@@ -5,6 +5,7 @@
 #include "bormasina.h"
 #include "polizor.h"
 #include "drujba.h"
+#include "lopata.h"
 
 #include "masina.h"
 #include "angajat.h"
@@ -31,6 +32,7 @@ int angajat::count = 0;
 int bormasina::count = 0;
 int polizor::count = 0;
 int drujba::count = 0;
+int lopata::count = 0;
 
 int main()
 {
