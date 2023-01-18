@@ -19,11 +19,11 @@ double calculare_total_scule(const std::vector<std::shared_ptr<scula>>& s)
         total += ((*s[i]).get_stock()) * (*s[i]).get_pret();
     return total;
 }
-double calculare_total_masina(const class masina m)
+double calculare_total_masina(const class masina &m)
 {
     return calculare_total_scule(m.get_scule());
 }
-double calculare_total_angajat(const class angajat a)
+double calculare_total_angajat(const class angajat &a)
 {
     return calculare_total_masina(a.get_masina());
 }

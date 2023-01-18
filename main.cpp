@@ -1,5 +1,4 @@
 #include <iostream>
-#include <fstream>
 #include <vector>
 
 #include "scula.h"
@@ -16,8 +15,8 @@
 void memorie();
 
 double calculare_total_scule(const std::vector<std::shared_ptr<scula>>& s);
-double calculare_total_masina(const class masina m);
-double calculare_total_angajat(const class angajat a);
+double calculare_total_masina(const class masina &m);
+double calculare_total_angajat(const class angajat &a);
 
 void afisare_scule(const std::vector<std::shared_ptr<scula>>& s);
 void afisare_masini(const std::vector <masina>& m);
@@ -80,6 +79,7 @@ int main()
     catch (eroare_masini &err)
     {
         std::cout << err.what()  << "\n";
+
     }
     catch (eroare_echipament &err)
     {
