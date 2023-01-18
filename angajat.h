@@ -82,7 +82,7 @@ public:
     void verificare()
     {
         if(masina.get_scule().size() > 0)
-            for(std::shared_ptr<scula> sc : masina.get_scule())
+            for(std::shared_ptr<scula> const &sc : masina.get_scule())
             {
                 sc->utilizeaza();
                 std::cout << "\n";

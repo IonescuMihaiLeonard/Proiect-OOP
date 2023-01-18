@@ -7,6 +7,7 @@
 class eroare_aplicatie : public  std::runtime_error
 {
     using  std::runtime_error::runtime_error;
+
 };
 
 class eroare_vanzare : public eroare_aplicatie
@@ -26,7 +27,6 @@ public:
 
 class eroare_masini : public eroare_aplicatie
 {
-    using eroare_aplicatie::eroare_aplicatie;
 
 public:
     explicit eroare_masini(const std::string &mesaj) : eroare_aplicatie("Eroare Masina::" + mesaj) {}
