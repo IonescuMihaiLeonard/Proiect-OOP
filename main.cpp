@@ -64,7 +64,7 @@ int main()
     /// A2-a afisare a sculelor
     std::cout << "In depozit dupa vanzarea sculelor mai avem:\n";
     afisare_scule(s);
-
+/*
     /// Afisare cifra de afaceri
     double total = vanzari(s, m, a);
     std::cout << "In ziua de azi am strans un total de " << total << "RON\n\n";
@@ -88,7 +88,7 @@ int main()
     a[0].taie_copac();
 
     memorie();
-
+*/
     return 0;
 }
 
