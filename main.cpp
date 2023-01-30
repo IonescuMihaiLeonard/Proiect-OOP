@@ -8,7 +8,11 @@
 #include "lopata.h"
 
 #include "masina.h"
+
 #include "angajat.h"
+
+#include "client.h"
+
 #include "crearea.h"
 
 #include "exceptii.h"
@@ -33,6 +37,8 @@ int bormasina::count = 0;
 int polizor::count = 0;
 int drujba::count = 0;
 int lopata::count = 0;
+
+client* client::instance = nullptr;
 
 int main()
 {
@@ -94,6 +100,46 @@ int main()
 
 
     a[0].taie_copac();
+
+
+    client* c = client::getInstance();
+    c->getInstance();
+
+    int id =0;
+    std::cout << "\n\n\n\n\n\n";
+
+    while(id != -1)
+    {
+        short op;
+        int nr;
+
+        std::cout << "\n\n\nOptiuni:\n";
+        std::cout << "1.Adaugare\n";
+        std::cout << "2.Afisare Bon\n";
+        std::cout << "-1.Tiparire Bon\n";
+
+        std::cin >> op;
+        if(op == 1)
+        {
+            std::cout << "Acestea sunt sculele pe care le avem in stock:\n";
+            afisare_scule(s);
+
+            std::cout << "Scrie id-ul sculei pe care vrei sa o adaugi pe bon urmat de numarul de scule";
+            std::cin >> id >> nr;
+
+            c->adaugare_scula(*s[id],nr);
+        }
+        else if(op == 2)
+        {
+            std::cout << "Acestea sunt sculele pe care le avem pe bon:\n";
+            afisare_scule(c->get_scule());
+        }
+        else if(op == -1)
+        {
+            id = -1;
+        }
+
+    }
 
     memorie();
 

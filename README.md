@@ -11,6 +11,9 @@ Programul are:
 
 -functii pentru vanzarea sculelor, inclusiv din cadrul masinilor sau angajatiilor
 
+-funcia de a vinde unui client scule prin tiparirea unui bon
+
+
 #### Cerințe
 - [x] definirea a minim 3-4 clase folosind compunere
 - [x] constructori de inițializare
