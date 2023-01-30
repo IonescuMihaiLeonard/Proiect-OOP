@@ -111,7 +111,7 @@ int main()
     while(id != -1)
     {
         short op;
-        int nr;
+
 
         std::cout << "\n\n\nOptiuni:\n";
         std::cout << "1.Adaugare\n";
@@ -121,6 +121,7 @@ int main()
         std::cin >> op;
         if(op == 1)
         {
+            short nr;
             std::cout << "Acestea sunt sculele pe care le avem in stock:\n";
             afisare_scule(s);
 
